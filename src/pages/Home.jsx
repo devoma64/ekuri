@@ -152,7 +152,7 @@ export default function Home() {
           <Reveal>
             <p className="eyebrow">Who we are</p>
             <h2 style={{ fontSize: "clamp(26px, 3.6vw, 38px)", fontWeight: 600, marginTop: 12, marginBottom: 20 }}>
-              Nigeria's largest community-owned pristine rainforest
+              Nigeria's largest community owned pristine rainforest
             </h2>
             <p style={{ whiteSpace: "pre-line" }}>{HISTORY.split("\n\n")[0]}</p>
             <p style={{ marginTop: 14 }}>

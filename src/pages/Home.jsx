@@ -13,43 +13,113 @@ export default function Home() {
     <>
       <HeroVideo>
         <div style={{ textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center" }}>
-          <motion.p
+          <motion.div
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            style={{ textTransform: "uppercase", letterSpacing: "0.16em", fontSize: 12.5, color: "var(--marigold)", fontWeight: 700, marginBottom: 18 }}
+            style={{ marginBottom: 20 }}
           >
-            {/* Ekuri Clan, Akamkpa LGA, Cross River State, Nigeria */}
-          </motion.p>
+            <span
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: 8,
+                padding: "7px 18px",
+                borderRadius: 999,
+                background: "rgba(246,244,236,0.12)",
+                border: "1px solid rgba(246,244,236,0.25)",
+                backdropFilter: "blur(10px)",
+                fontFamily: "var(--font-hero)",
+                fontSize: 12.5,
+                fontWeight: 700,
+                letterSpacing: "0.14em",
+                textTransform: "uppercase",
+                color: "var(--marigold)",
+              }}
+            >
+              🌿 Est. 1992 · Akamkpa, Cross River State
+            </span>
+          </motion.div>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            style={{ fontSize: "clamp(34px, 6vw, 68px)", fontWeight: 600, lineHeight: 1.08, color: "#fff", maxWidth: 820 }}
+            style={{
+              fontFamily: "var(--font-hero)",
+              fontSize: "clamp(32px, 5.5vw, 64px)",
+              fontWeight: 800,
+              lineHeight: 1.08,
+              letterSpacing: "-0.025em",
+              color: "#ffffff",
+              maxWidth: 900,
+              textTransform: "none",
+            }}
           >
-            EKURI INITIATIVE
+            THE EKURI INITIATIVE
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.22 }}
-            style={{ fontSize: 18, maxWidth: 1200, marginTop: 18, color: "rgba(246,244,236,0.85)" }}
+            style={{
+              fontFamily: "var(--font-hero)",
+              fontSize: "clamp(16px, 1.8vw, 19px)",
+              lineHeight: 1.6,
+              maxWidth: 1200,
+              marginTop: 20,
+              color: "rgba(246,244,236,0.9)",
+              fontWeight: 400,
+            }}
           >
-            {ORG.tagline} protecting 33,600 hectares of pristine forest at the buffer zone
-            of Cross River National Park, for the communities who have called it home for generations.
+            Nigeria's Largest Community Rainforest, Protected by Its People. 33,600 hectares of pristine rainforest stewarded and defended across 14 Ekuri Clan communities at the buffer zone of Cross River National Park.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.34 }}
-            style={{ marginTop: 34 }}
+            style={{ marginTop: 36, display: "flex", gap: 14, flexWrap: "wrap", justifyContent: "center" }}
           >
-            <Link to="/about" className="btn-lift" style={{
-              padding: "15px 34px", background: "var(--marigold)", color: "var(--canopy-deep)", borderRadius: 999,
-              fontWeight: 700, fontSize: 15, textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 8,
-            }}>
+            <Link
+              to="/about"
+              className="btn-lift"
+              style={{
+                padding: "15px 34px",
+                background: "var(--marigold)",
+                color: "var(--canopy-deep)",
+                borderRadius: 999,
+                fontFamily: "var(--font-hero)",
+                fontWeight: 700,
+                fontSize: 15,
+                textDecoration: "none",
+                display: "inline-flex",
+                alignItems: "center",
+                gap: 8,
+                boxShadow: "0 8px 24px -6px rgba(217,154,63,0.5)",
+              }}
+            >
               Learn Our Story <ArrowUpRight size={17} />
             </Link>
+            {/* <Link
+              to="/publications"
+              className="btn-lift"
+              style={{
+                padding: "15px 30px",
+                background: "rgba(246,244,236,0.12)",
+                backdropFilter: "blur(8px)",
+                border: "1px solid rgba(246,244,236,0.3)",
+                color: "#ffffff",
+                borderRadius: 999,
+                fontFamily: "var(--font-hero)",
+                fontWeight: 600,
+                fontSize: 15,
+                textDecoration: "none",
+                display: "inline-flex",
+                alignItems: "center",
+                gap: 8,
+              }}
+            >
+              View Publications
+            </Link> */}
           </motion.div>
         </div>
       </HeroVideo>

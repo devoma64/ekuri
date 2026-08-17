@@ -8,6 +8,8 @@
   --ink-soft: #55605a;
   --marigold: #d99a3f;
   --marigold-deep: #b47f2f;
+  --font-hero: "Plus Jakarta Sans", "Inter", system-ui, sans-serif;
+  --font-serif: "Fraunces", serif;
 }
 
 * {

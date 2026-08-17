@@ -8,7 +8,7 @@ import { HISTORY, VISION, MISSION, APPROACH, ORG, TIMELINE, FOUNDER_QUOTE } from
 export default function About() {
   return (
     <>
-      <PageHeader title="About The Ekuri Initiative" copy={ORG.registered} crumb="About" />
+      <PageHeader title="About Us" copy={ORG.registered} crumb="About" />
 
       <section className="section container">
         <div className="about-hero-grid" style={{ display: "grid", gridTemplateColumns: "1fr", gap: 48, alignItems: "center" }}>

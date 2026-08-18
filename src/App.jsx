@@ -37,6 +37,7 @@ export default function App() {
           <Route path="/people" element={<PageTransition><People /></PageTransition>} />
           <Route path="/partners" element={<PageTransition><Partners /></PageTransition>} />
           <Route path="/publications" element={<PageTransition><Publications /></PageTransition>} />
+          <Route path="/blog" element={<PageTransition><News /></PageTransition>} />
           <Route path="/news" element={<PageTransition><News /></PageTransition>} />
           <Route path="/contact" element={<PageTransition><Contact /></PageTransition>} />
           <Route path="/donate" element={<PageTransition><Donate /></PageTransition>} />

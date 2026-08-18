@@ -174,7 +174,7 @@ export default function Home() {
               <div style={{ background: "var(--moss)", borderRadius: 16, padding: 26, color: "#fff" }}>
                 <div style={{ fontFamily: "Fraunces, serif", fontSize: 30, fontWeight: 600 }}>1992</div>
                 <div style={{ fontSize: 13, marginTop: 6, color: "rgba(246,244,236,0.85)" }}>formally established, registered with the CAC in 1997</div>
-              </div>s
+              </div>
               <div style={{ background: "var(--paper-dim)", borderRadius: 16, padding: 26 }}>
                 <div style={{ fontFamily: "Fraunces, serif", fontSize: 30, fontWeight: 600, color: "var(--canopy)" }}>14</div>
                 <div style={{ fontSize: 13, marginTop: 6, color: "var(--ink-soft)" }}>Ekuri Clan communities involved</div>

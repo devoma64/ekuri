@@ -98,7 +98,7 @@ function Fireflies({ count = 14 }) {
 
 export default function CanopyScene() {
   return (
-    <div style={{ position: "absolute", inset: 0, overflow: "hidden", background: "linear-gradient(180deg, #0c1f17 0%, #14301f 45%, #1e3f28 75%, #24492e 100%)" }}>
+    <div style={{ position: "absolute", inset: 0, overflow: "hidden", background: "linear-gradient(180deg, #092009 0%, #0d3810 45%, #135518 75%, #166816 100%)" }}>
       {/* soft glow near the horizon, like dawn light through the canopy */}
       <div
         style={{
@@ -113,15 +113,15 @@ export default function CanopyScene() {
 
       {/* distant ridge */}
       <div style={{ position: "absolute", inset: 0 }}>
-        <CanopyLayer seed={1} baseline={190} amplitude={26} bumps={9} color="#0f2519" opacity={0.9} duration={70} />
+        <CanopyLayer seed={1} baseline={190} amplitude={26} bumps={9} color="#0c2e0e" opacity={0.9} duration={70} />
       </div>
       {/* mid canopy */}
       <div style={{ position: "absolute", inset: 0 }}>
-        <CanopyLayer seed={2} baseline={250} amplitude={40} bumps={13} color="#173a26" opacity={0.95} duration={46} direction={-1} />
+        <CanopyLayer seed={2} baseline={250} amplitude={40} bumps={13} color="#134a17" opacity={0.95} duration={46} direction={-1} />
       </div>
       {/* foreground canopy */}
       <div style={{ position: "absolute", inset: 0 }}>
-        <CanopyLayer seed={3} baseline={320} amplitude={58} bumps={17} color="#0c1f17" opacity={1} duration={30} />
+        <CanopyLayer seed={3} baseline={320} amplitude={58} bumps={17} color="#09220a" opacity={1} duration={30} />
       </div>
 
       {/* drifting mist */}

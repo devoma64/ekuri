@@ -38,7 +38,7 @@ export default function Navbar() {
         </div>
       </div> */}
 
-      <div style={{ background: "var(--paper)", boxShadow: scrolled ? "0 6px 24px -18px rgba(12,31,23,0.5)" : "none", transition: "box-shadow .3s ease" }}>
+      <div style={{ background: "var(--paper)", boxShadow: scrolled ? "0 6px 24px -18px rgba(11,50,11,0.4)" : "none", transition: "box-shadow .3s ease" }}>
         <div className="container" style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "14px 24px" }}>
           <Link to="/" onClick={closeMenu} style={{ display: "flex", alignItems: "center", gap: 10, textDecoration: "none" }}>
             <img src="/assets/img/ekuri-logo.png" alt="The Ekuri Initiative logo" style={{ height: 48, width: 48, objectFit: "contain" }} />

@@ -11,7 +11,7 @@ export default function PdfPreviewModal({ publication, onClose }) {
           exit={{ opacity: 0 }}
           onClick={onClose}
           style={{
-            position: "fixed", inset: 0, zIndex: 100, background: "rgba(12,31,23,0.72)",
+            position: "fixed", inset: 0, zIndex: 100, background: "rgba(11,50,11,0.75)",
             display: "flex", alignItems: "center", justifyContent: "center", padding: 20,
           }}
         >

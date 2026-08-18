@@ -50,7 +50,7 @@ export default function WhereWeWork() {
               </StaggerGroup>
             </Reveal>
             <Reveal>
-              <div style={{ borderRadius: 18, overflow: "hidden", border: "1px solid #fff", boxShadow: "0 20px 50px -30px rgba(12,31,23,0.4)" }}>
+              <div style={{ borderRadius: 18, overflow: "hidden", border: "1px solid #fff", boxShadow: "0 20px 50px -30px rgba(11,50,11,0.35)" }}>
                 <img
                   src="/assets/img/ekuri-perimeter-survey.jpg"
                   alt="Map of the Ekuri Clan community forest boundary"

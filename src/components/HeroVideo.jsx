@@ -105,7 +105,7 @@ export default function HeroVideo({ children }) {
           inset: 0,
           zIndex: 2,
           background:
-            "linear-gradient(180deg, rgba(12,31,23,0.7) 0%, rgba(12,31,23,0.38) 42%, rgba(12,31,23,0.88) 100%)",
+            "linear-gradient(180deg, rgba(11,50,11,0.72) 0%, rgba(11,50,11,0.38) 42%, rgba(11,50,11,0.88) 100%)",
         }}
       />
 
@@ -116,7 +116,7 @@ export default function HeroVideo({ children }) {
           inset: 0,
           zIndex: 2,
           background:
-            "radial-gradient(ellipse at 50% 35%, rgba(217, 154, 63, 0.18) 0%, rgba(12,31,23,0) 60%)",
+            "radial-gradient(ellipse at 50% 35%, rgba(217, 154, 63, 0.18) 0%, rgba(11,50,11,0) 60%)",
           pointerEvents: "none",
         }}
       />

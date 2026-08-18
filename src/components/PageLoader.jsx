@@ -45,7 +45,7 @@ export default function PageLoader({ onLoaded, minDuration = 1800 }) {
             position: "fixed",
             inset: 0,
             zIndex: 99999,
-            background: "radial-gradient(ellipse at 50% 45%, #133023 0%, #0c1f17 65%, #07130e 100%)",
+            background: "radial-gradient(ellipse at 50% 45%, #134816 0%, #0b320b 65%, #061e06 100%)",
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
@@ -62,7 +62,7 @@ export default function PageLoader({ onLoaded, minDuration = 1800 }) {
               width: 500,
               height: 500,
               borderRadius: "50%",
-              background: "radial-gradient(circle, rgba(217,154,63,0.12) 0%, rgba(47,92,63,0.15) 50%, transparent 70%)",
+              background: "radial-gradient(circle, rgba(217,154,63,0.14) 0%, rgba(22,104,22,0.2) 50%, transparent 70%)",
               filter: "blur(40px)",
               pointerEvents: "none",
             }}

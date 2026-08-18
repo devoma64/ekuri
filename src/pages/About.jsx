@@ -1,7 +1,6 @@
 import PageHeader from "../components/PageHeader";
 import Reveal from "../components/Reveal";
 import Timeline from "../components/Timeline";
-import ImagePlaceholder from "../components/ImagePlaceholder";
 import { Quote } from "lucide-react";
 import { HISTORY, VISION, MISSION, APPROACH, ORG, TIMELINE, FOUNDER_QUOTE } from "../data/content";
 
@@ -21,7 +20,13 @@ export default function About() {
             </div>
           </Reveal>
           <Reveal delay={100}>
-            <ImagePlaceholder label="Ekuri Community forest canopy or wildlife photo" aspect="4/5" />
+            <div style={{ borderRadius: 20, overflow: "hidden", boxShadow: "0 12px 32px -8px rgba(11,50,11,0.15)", border: "1px solid var(--paper-dim)" }}>
+              <img
+                src="/assets/img/wild-life.jpeg"
+                alt="Wildlife in the Ekuri Community pristine rainforest"
+                style={{ width: "100%", height: "100%", objectFit: "cover", display: "block", aspectRatio: "4/5" }}
+              />
+            </div>
           </Reveal>
         </div>
         <style>{`

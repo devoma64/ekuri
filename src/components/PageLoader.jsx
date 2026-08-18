@@ -168,7 +168,7 @@ export default function PageLoader({ onLoaded, minDuration = 1800 }) {
                 textTransform: "uppercase",
               }}
             >
-              Ekuri Initiative
+              e-intiative
             </motion.h1>
 
             {/* Subtitle / Tagline */}

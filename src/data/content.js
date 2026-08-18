@@ -4,7 +4,6 @@ export const NAV_LINKS = [
   { label: "Programs", to: "/programs" },
   { label: "Where We Work", to: "/where-we-work" },
   { label: "Gallery", to: "/gallery" },
-  { label: "People", to: "/people" },
   { label: "Partners", to: "/partners" },
   { label: "Publications", to: "/publications" },
   { label: "News", to: "/news" },

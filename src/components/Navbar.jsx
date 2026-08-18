@@ -20,7 +20,7 @@ export default function Navbar() {
 
   return (
     <header style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 60 }}>
-      <div
+      {/* <div
         style={{
           background: "var(--canopy-deep)", color: "rgba(246,244,236,0.85)", fontSize: 12.5, padding: "7px 0",
           display: scrolled ? "none" : "block",
@@ -36,7 +36,7 @@ export default function Navbar() {
             </span>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <div style={{ background: "var(--paper)", boxShadow: scrolled ? "0 6px 24px -18px rgba(12,31,23,0.5)" : "none", transition: "box-shadow .3s ease" }}>
         <div className="container" style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "14px 24px" }}>

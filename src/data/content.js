@@ -15,7 +15,7 @@ export const ORG = {
   name: "The Ekuri Initiative",
   shortName: "Ekuri Initiative",
   tagline: "Nigeria's largest community-owned and controlled pristine rainforest",
-  registered: "Registered with the Corporate Affairs Commission (CAC), Abuja, Nigeria, on March 13, 1997",
+  registered: "Welcome to Ekuri Initiative - Since March 13, 1997",
   email: "einitiative92@gmail.com",
 };
 

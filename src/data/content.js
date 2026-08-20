@@ -28,7 +28,7 @@ export const MISSION = "To catalyze and perpetually undertake community-based bi
 
 export const APPROACH = `The approach adopted towards conserving biological diversity in the Ekuri Community Pristine Rainforest is Community-Based Conservation. Community-based approaches to conservation are now globally popular (Brooks et al., 2013), and accepted in mainstream conservation practice (Roe, 2008).
 
-Community-based conservation enhances community participation, local user rights, and stewardship over natural resources. It allows those nearest to natural resources — who already share in the costs of conservation, such as wildlife depredation of crops — to share in the benefits as well (World Bank, 2010).`;
+Community-based conservation enhances community participation, local user rights, and stewardship over natural resources. It allows those nearest to natural resources who already share in the costs of conservation, such as wildlife depredation of crops to share in the benefits as well (World Bank, 2010).`;
 
 export const PROGRAMS = [
   { icon: "ShieldCheck", title: "Forest Protection & Boundary Patrol", copy: "Community Rangers patrol the Ekuri Community forest year-round, with annual boundary cleaning to keep encroachment in check." },
@@ -68,8 +68,8 @@ export const MANAGEMENT = [
 ];
 
 export const PARTNERS = [
-  { name: "Cross River National Park", copy: "Akamkpa, Cross River State — co-manager of the buffer-zone relationship and a long-time technical partner." },
-  { name: "Cross River State Forestry Commission", copy: "Calabar — the state body responsible for forest law, licensing, and conservation policy." },
+  { name: "Cross River National Park", copy: "Akamkpa, Cross River State co-manager of the buffer-zone relationship and a long-time technical partner." },
+  { name: "Cross River State Forestry Commission", copy: "Calabar the state body responsible for forest law, licensing, and conservation policy." },
   { name: "UNDP Equator Initiative", copy: "Awarded the Ekuri Initiative the Equator Prize in 2004 for outstanding community-based conservation." },
   { name: "Ford Foundation", copy: "Funded the original perimeter survey, land use plan, and multiple community forestry initiatives." },
   { name: "World Wildlife Fund (WWF)", copy: "Advocated for the protection of Cross River National Park and the Ekuri forest during the Superhighway dispute." },
@@ -85,13 +85,13 @@ export const TIMELINE = [
   {
     year: "1982",
     title: "Old Ekuri rejects logging rights for a road",
-    copy: "Old Ekuri began negotiating with a logging company to build a road into the community in exchange for logging rights. Chief Otey Esira, Village Head of New Ekuri, vetoed the deal — arguing the forest's benefits had to continue for the community in perpetuity — and proposed building the road themselves instead. The community agreed. This rejection marked the formal start of Ekuri's community forest management.",
+    copy: "Old Ekuri began negotiating with a logging company to build a road into the community in exchange for logging rights. Chief Otey Esira, Village Head of New Ekuri, vetoed the deal arguing the forest's benefits had to continue for the community in perpetuity and proposed building the road themselves instead. The community agreed. This rejection marked the formal start of Ekuri's community forest management.",
     source: "UNDP Equator Initiative Case Study, 2004",
   },
   {
     year: "1986–1997",
     title: "A 40km road, self-funded",
-    copy: "Levies on the sale of non-timber forest products, collected from every member of Old and New Ekuri, funded construction of a 40km road. It reached Old Ekuri in 1990 and New Ekuri in 1997 — paid for entirely by the community, without mortgaging the forest.",
+    copy: "Levies on the sale of non-timber forest products, collected from every member of Old and New Ekuri, funded construction of a 40km road. It reached Old Ekuri in 1990 and New Ekuri in 1997 paid for entirely by the community, without mortgaging the forest.",
     source: "UNDP Equator Initiative Case Study, 2004",
   },
   {
@@ -103,13 +103,13 @@ export const TIMELINE = [
   {
     year: "1992",
     title: "The Ekuri Initiative is formally established",
-    copy: "Following the 1991 inception of Cross River National Park, the Ekuri Community gained formal support to manage their own forest — the first community-managed forest system of its kind in Nigeria. The Ekuri Initiative was formally established in 1992, ten years after the idea began. It was later registered with the Corporate Affairs Commission on March 13, 1997.",
+    copy: "Following the 1991 inception of Cross River National Park, the Ekuri Community gained formal support to manage their own forest, the first community-managed forest system of its kind in Nigeria. The Ekuri Initiative was formally established in 1992, ten years after the idea began. It was later registered with the Corporate Affairs Commission on March 13, 1997.",
     source: "UNDP Equator Initiative Case Study, 2004; The Ekuri Initiative Website Plan",
   },
   {
     year: "1996",
     title: "Six leaders sentenced rather than concede the forest",
-    copy: "A court ordered the reinstallation of the dethroned Chief and sentenced six Ekuri leaders — Patrick Akwa, Abel Aimor Ogar, Raphael Akamo, Abel Egbe, and Chiefs Edwin Ogar and Clement Agbor — to two-year prison sentences for obstructing logging of the community forest. They served their sentences rather than concede the forest area. The community went on to win a civil suit against the deposed Chief, his supporters, and the logging company.",
+    copy: "A court ordered the reinstallation of the dethroned Chief and sentenced six Ekuri leaders Patrick Akwa, Abel Aimor Ogar, Raphael Akamo, Abel Egbe, and Chiefs Edwin Ogar and Clement Agbor — to two-year prison sentences for obstructing logging of the community forest. They served their sentences rather than concede the forest area. The community went on to win a civil suit against the deposed Chief, his supporters, and the logging company.",
     source: "UNDP Equator Initiative Case Study, 2004",
   },
   {

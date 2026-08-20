@@ -12,7 +12,7 @@ export default function Gallery() {
     <>
       <PageHeader
         title="Gallery"
-        copy="Forest patrols, community meetings, workshops, and milestones from the Ekuri Initiative photo slots ready for the real thing."
+        copy="Forest patrols, community meetings, workshops, and milestones from the Ekuri Initiative."
         crumb="Gallery"
       />
 

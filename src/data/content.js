@@ -39,7 +39,7 @@ export const PROGRAMS = [
   { icon: "Wheat", title: "Sustainable Rural Livelihoods", copy: "Programs that diversify income so pressure on high-value forest products eases over time." },
   { icon: "Building2", title: "Infrastructure & Social Development", copy: "Community-based infrastructural and social development projects funded through forest stewardship." },
   { icon: "Megaphone", title: "Conservation Education & Advocacy", copy: "Education, advocacy, and inter-communal meetings and conflict resolution across the Ekuri Clan." },
-  { icon: "Compass", title: "Eco-Tourism Development", copy: "Initiatives to responsibly open parts of the forest — falls, peaks, and trails — to eco-tourism." },
+  { icon: "Compass", title: "Eco-Tourism Development", copy: "Initiatives to responsibly open parts of the forest falls, peaks, and trails to eco-tourism." },
   { icon: "GraduationCap", title: "Organizational Capacity Building", copy: "Ongoing capacity building to keep the Initiative's governance and programs strong." },
 ];
 
@@ -109,7 +109,7 @@ export const TIMELINE = [
   {
     year: "1996",
     title: "Six leaders sentenced rather than concede the forest",
-    copy: "A court ordered the reinstallation of the dethroned Chief and sentenced six Ekuri leaders Patrick Akwa, Abel Aimor Ogar, Raphael Akamo, Abel Egbe, and Chiefs Edwin Ogar and Clement Agbor — to two-year prison sentences for obstructing logging of the community forest. They served their sentences rather than concede the forest area. The community went on to win a civil suit against the deposed Chief, his supporters, and the logging company.",
+    copy: "A court ordered the reinstallation of the dethroned Chief and sentenced six Ekuri leaders Patrick Akwa, Abel Aimor Ogar, Raphael Akamo, Abel Egbe, and Chiefs Edwin Ogar and Clement Agbor to two-year prison sentences for obstructing logging of the community forest. They served their sentences rather than concede the forest area. The community went on to win a civil suit against the deposed Chief, his supporters, and the logging company.",
     source: "UNDP Equator Initiative Case Study, 2004",
   },
   {
@@ -137,20 +137,78 @@ export const FOUNDER_QUOTE = {
   source: "UNDP Equator Initiative Case Study, 2004",
 };
 
-export const GALLERY_FILTERS = ["All", "Forest Patrol", "Community Meetings", "Workshops & Training", "Events", "Forest & Wildlife"];
+export const GALLERY_FILTERS = [
+  "All",
+  "Community Meetings",
+  "Forest & Wildlife",
+  "Agroforestry & Livelihoods",
+  "Milestones & Maps",
+];
 
 export const GALLERY_ITEMS = [
-  { title: "Community Ranger boundary patrol", category: "Forest Patrol" },
-  { title: "Annual boundary cleaning exercise", category: "Forest Patrol" },
-  { title: "General Assembly meeting, Old Ekuri", category: "Community Meetings" },
-  { title: "General Assembly meeting, New Ekuri", category: "Community Meetings" },
-  { title: "Inter-communal conflict resolution meeting", category: "Community Meetings" },
-  { title: "Community forestry skills workshop", category: "Workshops & Training" },
-  { title: "Micro-credit and livelihoods training", category: "Workshops & Training" },
-  { title: "Conservation education outreach", category: "Workshops & Training" },
-  { title: "Board of Trustees meeting", category: "Events" },
-  { title: "Equator Prize recognition", category: "Events" },
-  { title: "Ekuri Community pristine rainforest canopy", category: "Forest & Wildlife" },
-  { title: "Wildlife of the Ekuri Community forest", category: "Forest & Wildlife" },
+  {
+    id: 5,
+    title: "Ekuri General Assembly & Democratic Governance",
+    category: "Community Meetings",
+    src: null,
+    description: "Democratic assembly of Old and New Ekuri villagers deciding on collective forest management, revenue sharing, and community development.",
+    location: "Ekuri Village Assembly",
+  },
+  {
+    id: 6,
+    title: "Sustainable Agroforestry & Farmland",
+    category: "Agroforestry & Livelihoods",
+    src: "/assets/img/ekuri-agroforestry-farming.jpg",
+    description: "Traditional agroforestry plots buffering the forest boundary, integrating sustainable cash crops with conservation principles.",
+    location: "Agricultural Buffer Zone",
+  },
+  {
+    id: 7,
+    title: "Rainforest Flora & Understory Biodiversity",
+    category: "Forest & Wildlife",
+    src: "/assets/img/ekuri-rainforest-flora.jpg",
+    description: "Vibrant tropical understory and wild flora thriving inside the protected primary rainforest ecosystem.",
+    location: "Ekuri Rainforest",
+  },
+  {
+    id: 8,
+    title: "Wildlife of the Ekuri Forest & National Park Corridor",
+    category: "Forest & Wildlife",
+    src: "/assets/img/wild-life.jpeg",
+    description: "Rich biodiversity and wildlife preserved within the contiguous Cross River National Park corridor.",
+    location: "Biodiversity Sanctuary",
+  },
+  {
+    id: 9,
+    title: "Pristine Rainforest Canopy",
+    category: "Forest & Wildlife",
+    src: "/assets/img/hero-bg.jpg",
+    description: "Morning sunbeams breaking through the ancient canopy of the largest community-managed rainforest in West Africa.",
+    location: "Canopy View",
+  },
+  {
+    id: 10,
+    title: "UNDP Equator Prize Recognition",
+    category: "Milestones & Maps",
+    src: null,
+    description: "International acclaim and recognition for community-driven biodiversity conservation and poverty reduction.",
+    location: "International Award",
+  },
+  {
+    id: 11,
+    title: "Certified Perimeter Survey Plan",
+    category: "Milestones & Maps",
+    src: "/assets/img/ekuri-perimeter-survey.jpg",
+    description: "The official certified boundary survey providing legal recognition for the 33,600-hectare Ekuri Community Forest.",
+    location: "Cadastral Record",
+  },
+  {
+    id: 12,
+    title: "Superhighway Route Defense Map",
+    category: "Milestones & Maps",
+    src: "/assets/img/superhighway-map.jpg",
+    description: "Cartographic defense showing the proposed 260km superhighway and the community campaign that successfully protected the forest.",
+    location: "Advocacy Campaign",
+  },
 ];
 

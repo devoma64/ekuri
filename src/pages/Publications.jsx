@@ -14,6 +14,7 @@ export default function Publications() {
         title="Resources & Publications"
         copy="Case studies, laws, maps, and correspondence documenting the Ekuri Initiative's history and the fight to protect this forest."
         crumb="Publications"
+        bgImage="/assets/img/ekuri-perimeter-survey.jpg"
       />
 
       <section className="section container">

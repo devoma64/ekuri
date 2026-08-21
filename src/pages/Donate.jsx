@@ -16,6 +16,7 @@ export default function Donate() {
         title="Support the Forest"
         copy="Every gift helps the Ekuri Initiative keep 33,600 hectares of pristine rainforest standing — for the communities who call it home, and for the planet."
         crumb="Donate"
+        bgImage="/assets/img/hero-bg.jpg"
       />
 
       <section className="section container">

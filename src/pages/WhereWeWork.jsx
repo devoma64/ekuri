@@ -6,7 +6,12 @@ import { COMMUNITIES, WHERE_WE_WORK } from "../data/content";
 export default function WhereWeWork() {
   return (
     <>
-      <PageHeader title="Where We Work" copy="The Ekuri Clan forest communities of Akamkpa Local Government Area, Cross River State." crumb="Where We Work" />
+      <PageHeader
+        title="Where We Work"
+        copy="The Ekuri Clan forest communities of Akamkpa Local Government Area, Cross River State."
+        crumb="Where We Work"
+        bgImage="/assets/img/ekuri-forest-work.jpg"
+      />
 
       <section className="container" style={{ padding: "48px 24px 0" }}>
         <Reveal>

@@ -21,7 +21,12 @@ function PersonCard({ name, role }) {
 export default function People() {
   return (
     <>
-      <PageHeader title="People" copy="The trustees and staff who steward the Ekuri Initiative's programs and governance." crumb="People" />
+      <PageHeader
+        title="People"
+        copy="The trustees and staff who steward the Ekuri Initiative's programs and governance."
+        crumb="People"
+        bgImage="/assets/img/ekuri-forest-work.jpg"
+      />
 
       <section className="section container">
         <SectionTitle eyebrow="Governance" title="Board of Trustees" />

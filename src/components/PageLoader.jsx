@@ -159,16 +159,16 @@ export default function PageLoader({ onLoaded, minDuration = 1800 }) {
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.15, duration: 0.6 }}
               style={{
-                fontFamily: "Fraunces, serif",
+                fontFamily: "var(--font-serif)",
                 fontSize: "clamp(24px, 4vw, 32px)",
-                fontWeight: 600,
-                letterSpacing: "0.08em",
+                fontWeight: 700,
+                letterSpacing: "0.04em",
                 color: "#ffffff",
                 margin: 0,
                 textTransform: "uppercase",
               }}
             >
-              e-intiative
+              Ekuri Initiative
             </motion.h1>
 
             {/* Subtitle / Tagline */}
@@ -177,7 +177,8 @@ export default function PageLoader({ onLoaded, minDuration = 1800 }) {
               animate={{ y: 0, opacity: 0.8 }}
               transition={{ delay: 0.25, duration: 0.6 }}
               style={{
-                fontSize: 13.5,
+                fontSize: 13,
+                fontFamily: "var(--font-sans)",
                 color: "rgba(246, 244, 236, 0.75)",
                 letterSpacing: "0.14em",
                 textTransform: "uppercase",
@@ -230,7 +231,7 @@ export default function PageLoader({ onLoaded, minDuration = 1800 }) {
                   display: "flex",
                   justifyContent: "space-between",
                   fontSize: 11.5,
-                  fontFamily: "Inter, sans-serif",
+                  fontFamily: "var(--font-sans)",
                   color: "rgba(246,244,236,0.6)",
                   letterSpacing: "0.06em",
                 }}

@@ -144,7 +144,7 @@ export default function BlogArticleModal({ article, onClose, onSelectArticle, al
             {/* Title */}
             <h1
               style={{
-                fontFamily: "Fraunces, serif",
+                fontFamily: "var(--font-serif)",
                 fontSize: "clamp(22px, 3.2vw, 30px)",
                 fontWeight: 600,
                 lineHeight: 1.25,

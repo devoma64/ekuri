@@ -169,7 +169,7 @@ export default function News() {
                     {/* Article Title */}
                     <h1
                       style={{
-                        fontFamily: "Fraunces, serif",
+                        fontFamily: "var(--font-serif)",
                         fontSize: "clamp(24px, 3.2vw, 34px)",
                         fontWeight: 600,
                         lineHeight: 1.25,
@@ -556,7 +556,7 @@ export default function News() {
                             <h2
                               onClick={() => handleSelectPost(post.id)}
                               style={{
-                                fontFamily: "Fraunces, serif",
+                                fontFamily: "var(--font-serif)",
                                 fontSize: "clamp(20px, 2.5vw, 24px)",
                                 fontWeight: 600,
                                 lineHeight: 1.3,

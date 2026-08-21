@@ -42,7 +42,7 @@ export default function Navbar() {
         <div className="container" style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "14px 24px" }}>
           <Link to="/" onClick={closeMenu} style={{ display: "flex", alignItems: "center", gap: 10, textDecoration: "none" }}>
             <img src="/assets/img/ekuri-logo.png" alt="The Ekuri Initiative logo" style={{ height: 48, width: 48, objectFit: "contain" }} />
-            {/* <span style={{ fontFamily: "Fraunces, serif", fontSize: 17.5, fontWeight: 600, color: "var(--ink)", lineHeight: 1.2, maxWidth: 150 }}>
+            {/* <span style={{ fontFamily: "var(--font-serif)", fontSize: 17.5, fontWeight: 600, color: "var(--ink)", lineHeight: 1.2, maxWidth: 150 }}>
               Ekuri Initiative
             </span> */}
           </Link>

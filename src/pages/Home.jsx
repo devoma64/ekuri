@@ -29,10 +29,10 @@ export default function Home() {
                 background: "rgba(246,244,236,0.12)",
                 border: "1px solid rgba(246,244,236,0.25)",
                 backdropFilter: "blur(10px)",
-                fontFamily: "var(--font-hero)",
+                fontFamily: "var(--font-sans)",
                 fontSize: 12.5,
-                fontWeight: 700,
-                letterSpacing: "0.14em",
+                fontWeight: 600,
+                letterSpacing: "0.12em",
                 textTransform: "uppercase",
                 color: "var(--marigold)",
               }}
@@ -45,14 +45,15 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
             style={{
-              fontFamily: "var(--font-hero)",
-              fontSize: "clamp(32px, 5.5vw, 64px)",
-              fontWeight: 800,
-              lineHeight: 1.08,
-              letterSpacing: "-0.025em",
+              fontFamily: "var(--font-serif)",
+              fontSize: "clamp(32px, 5.2vw, 62px)",
+              fontWeight: 700,
+              lineHeight: 1.12,
+              letterSpacing: "0.04em",
               color: "#ffffff",
-              maxWidth: 900,
-              textTransform: "none",
+              maxWidth: 960,
+              textTransform: "uppercase",
+              textShadow: "0 3px 24px rgba(0, 0, 0, 0.55)",
             }}
           >
             THE EKURI INITIATIVE
@@ -62,13 +63,14 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.22 }}
             style={{
-              fontFamily: "var(--font-hero)",
+              fontFamily: "var(--font-sans)",
               fontSize: "clamp(16px, 1.8vw, 19px)",
-              lineHeight: 1.6,
-              maxWidth: 1200,
-              marginTop: 20,
-              color: "rgba(246,244,236,0.9)",
+              lineHeight: 1.65,
+              maxWidth: 1100,
+              marginTop: 22,
+              color: "rgba(246,244,236,0.95)",
               fontWeight: 400,
+              textShadow: "0 2px 14px rgba(0, 0, 0, 0.45)",
             }}
           >
             Nigeria's Largest Community Rainforest, Protected by Its People. 33,600 hectares of pristine rainforest stewarded and defended across 14 Ekuri Clan communities at the buffer zone of Cross River National Park.
@@ -87,8 +89,8 @@ export default function Home() {
                 background: "var(--marigold)",
                 color: "var(--canopy-deep)",
                 borderRadius: 999,
-                fontFamily: "var(--font-hero)",
-                fontWeight: 700,
+                fontFamily: "var(--font-sans)",
+                fontWeight: 600,
                 fontSize: 15,
                 textDecoration: "none",
                 display: "inline-flex",
@@ -99,55 +101,12 @@ export default function Home() {
             >
               Learn Our Story <ArrowUpRight size={17} />
             </Link>
-            {/* <Link
-              to="/publications"
-              className="btn-lift"
-              style={{
-                padding: "15px 30px",
-                background: "rgba(246,244,236,0.12)",
-                backdropFilter: "blur(8px)",
-                border: "1px solid rgba(246,244,236,0.3)",
-                color: "#ffffff",
-                borderRadius: 999,
-                fontFamily: "var(--font-hero)",
-                fontWeight: 600,
-                fontSize: 15,
-                textDecoration: "none",
-                display: "inline-flex",
-                alignItems: "center",
-                gap: 8,
-              }}
-            >
-              View Publications
-            </Link> */}
           </motion.div>
         </div>
       </HeroVideo>
 
-      {/* PARTNERS STRIP */}
-      {/* <section style={{ padding: "56px 24px", borderTop: "1px solid var(--paper-dim)", borderBottom: "1px solid var(--paper-dim)" }}>
-        <div className="container">
-          <Reveal>
-            <p style={{ textAlign: "center", fontSize: 12.5, fontWeight: 600, color: "var(--ink-soft)", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: 28 }}>
-              In partnership with
-            </p>
-          </Reveal>
-          <StaggerGroup style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(150px, 1fr))", gap: 16 }}>
-            {PARTNERS.map((p) => (
-              <StaggerItem key={p.name}>
-                <div style={{ height: 72, display: "flex", alignItems: "center", justifyContent: "center", textAlign: "center", padding: "0 10px" }}>
-                  <span style={{ fontFamily: "Fraunces, serif", fontWeight: 600, fontSize: 13.5, color: "var(--canopy)", lineHeight: 1.3 }}>
-                    {p.name}
-                  </span>
-                </div>
-              </StaggerItem>
-            ))}
-          </StaggerGroup>
-        </div>
-      </section> */}
-
       {/* ABOUT PREVIEW */}
-      <section className="container" style={{ padding: "96px 24px" }}>
+      <section className="container" style={{ padding: "96px 24px 64px" }}>
         <div className="about-grid" style={{ display: "grid", gridTemplateColumns: "1fr", gap: 48, alignItems: "center" }}>
           <Reveal>
             <p className="eyebrow">Who we are</p>
@@ -168,19 +127,19 @@ export default function Home() {
           <Reveal delay={120}>
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18 }}>
               <div style={{ background: "var(--canopy)", borderRadius: 16, padding: 26, color: "#fff" }}>
-                <div style={{ fontFamily: "Fraunces, serif", fontSize: 30, fontWeight: 600, color: "var(--marigold)" }}>33,600</div>
+                <div style={{ fontFamily: "var(--font-serif)", fontSize: 32, fontWeight: 700, color: "var(--marigold)" }}>33,600</div>
                 <div style={{ fontSize: 13, marginTop: 6, color: "rgba(246,244,236,0.8)" }}>hectares of community-owned rainforest</div>
               </div>
               <div style={{ background: "var(--moss)", borderRadius: 16, padding: 26, color: "#fff" }}>
-                <div style={{ fontFamily: "Fraunces, serif", fontSize: 30, fontWeight: 600 }}>1992</div>
+                <div style={{ fontFamily: "var(--font-serif)", fontSize: 32, fontWeight: 700 }}>1992</div>
                 <div style={{ fontSize: 13, marginTop: 6, color: "rgba(246,244,236,0.85)" }}>formally established, registered with the CAC in 1997</div>
               </div>
               <div style={{ background: "var(--paper-dim)", borderRadius: 16, padding: 26 }}>
-                <div style={{ fontFamily: "Fraunces, serif", fontSize: 30, fontWeight: 600, color: "var(--canopy)" }}>14</div>
+                <div style={{ fontFamily: "var(--font-serif)", fontSize: 32, fontWeight: 700, color: "var(--canopy)" }}>14</div>
                 <div style={{ fontSize: 13, marginTop: 6, color: "var(--ink-soft)" }}>Ekuri Clan communities involved</div>
               </div>
               <div style={{ background: "var(--marigold)", borderRadius: 16, padding: 26 }}>
-                <div style={{ fontFamily: "Fraunces, serif", fontSize: 30, fontWeight: 600, color: "var(--canopy-deep)" }}>2004</div>
+                <div style={{ fontFamily: "var(--font-serif)", fontSize: 32, fontWeight: 700, color: "var(--canopy-deep)" }}>2004</div>
                 <div style={{ fontSize: 13, marginTop: 6, color: "var(--canopy-deep)" }}>UNDP Equator Prize winner</div>
               </div>
             </div>
@@ -191,6 +150,80 @@ export default function Home() {
             .about-grid { grid-template-columns: 1.1fr 0.9fr !important; }
           }
         `}</style>
+      </section>
+
+      {/* FEATURED PHOTO SPOTLIGHT */}
+      <section className="container" style={{ padding: "0 24px 96px" }}>
+        <Reveal>
+          <div
+            style={{
+              position: "relative",
+              borderRadius: 24,
+              overflow: "hidden",
+              boxShadow: "0 20px 48px -12px rgba(11,50,11,0.16)",
+              border: "1px solid var(--paper-dim)",
+              background: "#122a16",
+            }}
+          >
+            <img
+              src="/assets/img/ekuri-forest-work.jpg"
+              alt="Ekuri community members actively stewarding the pristine rainforest"
+              style={{
+                width: "100%",
+                height: "auto",
+                maxHeight: 580,
+                objectFit: "cover",
+                display: "block",
+              }}
+            />
+            <div
+              style={{
+                position: "absolute",
+                bottom: 0,
+                left: 0,
+                right: 0,
+                background: "linear-gradient(to top, rgba(11,36,15,0.9) 0%, rgba(11,36,15,0.4) 60%, transparent 100%)",
+                padding: "36px 32px 24px",
+                color: "#ffffff",
+                display: "flex",
+                flexWrap: "wrap",
+                alignItems: "flex-end",
+                justifyContent: "space-between",
+                gap: 16,
+              }}
+            >
+              <div>
+                <span
+                  style={{
+                    display: "inline-block",
+                    padding: "4px 12px",
+                    borderRadius: 999,
+                    background: "var(--marigold)",
+                    color: "var(--canopy-deep)",
+                    fontSize: 12,
+                    fontWeight: 700,
+                    textTransform: "uppercase",
+                    letterSpacing: "0.08em",
+                    marginBottom: 8,
+                  }}
+                >
+                  On The Ground
+                </span>
+                <p
+                  style={{
+                    margin: 0,
+                    fontSize: "clamp(15px, 1.8vw, 18px)",
+                    fontWeight: 500,
+                    color: "rgba(246,244,236,0.95)",
+                    maxWidth: 700,
+                  }}
+                >
+                  Ekuri villagers actively clearing boundary paths, maintaining conservation corridors, and protecting their 33,600-hectare ancestral forest.
+                </p>
+              </div>
+            </div>
+          </div>
+        </Reveal>
       </section>
 
       {/* VISION / MISSION */}

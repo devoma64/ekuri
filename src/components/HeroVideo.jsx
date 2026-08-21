@@ -98,25 +98,25 @@ export default function HeroVideo({ children }) {
         </video>
       )}
 
-      {/* Cinematic gradient overlays for contrast and depth */}
+      {/* Cinematic gradient overlays for strong contrast and depth */}
       <div
         style={{
           position: "absolute",
           inset: 0,
           zIndex: 2,
           background:
-            "linear-gradient(180deg, rgba(11,50,11,0.72) 0%, rgba(11,50,11,0.38) 42%, rgba(11,50,11,0.88) 100%)",
+            "linear-gradient(180deg, rgba(7,26,7,0.85) 0%, rgba(7,26,7,0.68) 45%, rgba(7,26,7,0.92) 100%)",
         }}
       />
 
-      {/* Subtle warm radial highlight matching sun rays */}
+      {/* Center focus vignette */}
       <div
         style={{
           position: "absolute",
           inset: 0,
           zIndex: 2,
           background:
-            "radial-gradient(ellipse at 50% 35%, rgba(217, 154, 63, 0.18) 0%, rgba(11,50,11,0) 60%)",
+            "radial-gradient(ellipse at 50% 50%, rgba(11,50,11,0.2) 0%, rgba(7,26,7,0.6) 100%)",
           pointerEvents: "none",
         }}
       />
@@ -159,8 +159,8 @@ export default function HeroVideo({ children }) {
         style={{
           position: "relative",
           zIndex: 3,
-          paddingBottom: 90,
-          paddingTop: 160,
+          paddingBottom: 110,
+          paddingTop: "clamp(190px, 24vh, 250px)",
           width: "100%",
         }}
       >

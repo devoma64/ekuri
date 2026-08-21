@@ -10,18 +10,16 @@ export default function WhereWeWork() {
 
       <section className="container" style={{ padding: "48px 24px 0" }}>
         <Reveal>
-          <div style={{ borderRadius: 20, overflow: "hidden", border: "1px solid var(--paper-dim)" }}>
+          <div style={{ borderRadius: 20, overflow: "hidden", border: "1px solid var(--paper-dim)", boxShadow: "0 12px 32px -8px rgba(11,50,11,0.12)" }}>
             <img
-              src="/assets/img/ekuri-perimeter-survey.jpg"
-              alt="Certified plan showing the boundary of Old and New Ekuri Community Forest, Akamkpa Local Government Area, Cross River State of Nigeria"
-              style={{ width: "100%", display: "block" }}
+              src="/assets/img/ekuri-forest-work.jpg"
+              alt="Ekuri community members actively stewarding and working in the community rainforest"
+              style={{ width: "100%", maxHeight: 560, objectFit: "cover", display: "block" }}
             />
-         </div>
+          </div>
           <p style={{ fontSize: 12.5, marginTop: 10, color: "var(--ink-soft)", textAlign: "center" }}>
-             The certified boundary survey of Old and New Ekuri Community Forest the legal basis for the 33,600-hectare
-             community forest. Full record in{" "}
-             <a href="/publications" style={{ color: "var(--marigold-deep)", fontWeight: 600 }}>Publications</a>.
-           </p>
+            Ekuri community members actively stewarding, maintaining trails, and safeguarding the 33,600-hectare rainforest.
+          </p>
         </Reveal>
       </section>
 

@@ -19,7 +19,7 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             style={{ marginBottom: 20 }}
           >
-            <span
+            {/* <span
               style={{
                 display: "inline-flex",
                 alignItems: "center",
@@ -38,7 +38,7 @@ export default function Home() {
               }}
             >
               🌿 Est. 1992 · Akamkpa, Cross River State
-            </span>
+            </span> */}
           </motion.div>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -85,21 +85,23 @@ export default function Home() {
               to="/about"
               className="btn-lift"
               style={{
-                padding: "15px 34px",
-                background: "var(--marigold)",
-                color: "var(--canopy-deep)",
+                padding: "16px 36px",
+                background: "linear-gradient(135deg, #1f7a36 0%, #155e27 100%)",
+                color: "#ffffff",
                 borderRadius: 999,
                 fontFamily: "var(--font-sans)",
-                fontWeight: 600,
-                fontSize: 15,
+                fontWeight: 700,
+                fontSize: 15.5,
                 textDecoration: "none",
                 display: "inline-flex",
                 alignItems: "center",
                 gap: 8,
-                boxShadow: "0 8px 24px -6px rgba(217,154,63,0.5)",
+                boxShadow: "0 8px 24px -4px rgba(31, 122, 54, 0.45)",
+                border: "1px solid rgba(255, 255, 255, 0.2)",
               }}
             >
-              Learn Our Story <ArrowUpRight size={17} />
+              <span>Learn Our Story</span>
+              <ArrowUpRight size={18} />
             </Link>
           </motion.div>
         </div>
@@ -226,20 +228,91 @@ export default function Home() {
         </Reveal>
       </section>
 
-      {/* VISION / MISSION */}
-      <section style={{ background: "var(--canopy)", color: "#fff", padding: "88px 24px" }}>
-        <div className="container">
+      {/* VISION / MISSION (BOTANICAL LIGHT GREEN THEME) */}
+      <section
+        style={{
+          position: "relative",
+          background: "linear-gradient(135deg, #1d6e30 0%, #155424 50%, #0d3816 100%)",
+          color: "#ffffff",
+          padding: "96px 24px",
+          overflow: "hidden",
+        }}
+      >
+        {/* Ambient Radial Aura */}
+        <div
+          style={{
+            position: "absolute",
+            top: "-30%",
+            left: "50%",
+            transform: "translateX(-50%)",
+            width: "800px",
+            height: "500px",
+            borderRadius: "50%",
+            background: "radial-gradient(circle, rgba(217, 154, 63, 0.15) 0%, rgba(29, 110, 48, 0) 70%)",
+            pointerEvents: "none",
+          }}
+        />
+
+        <div className="container" style={{ position: "relative", zIndex: 1 }}>
           <div className="vm-grid" style={{ display: "grid", gridTemplateColumns: "1fr", gap: 32 }}>
             <Reveal>
-              <div style={{ background: "rgba(246,244,236,0.06)", border: "1px solid rgba(246,244,236,0.14)", borderRadius: 18, padding: 32, height: "100%" }}>
-                <p className="eyebrow" style={{ color: "var(--marigold)" }}>Vision</p>
-                <p style={{ fontSize: 16.5, lineHeight: 1.7, marginTop: 14, color: "rgba(246,244,236,0.9)" }}>{VISION}</p>
+              <div
+                style={{
+                  background: "rgba(255, 255, 255, 0.08)",
+                  backdropFilter: "blur(10px)",
+                  border: "1px solid rgba(255, 255, 255, 0.16)",
+                  borderRadius: 20,
+                  padding: "clamp(28px, 4vw, 40px)",
+                  height: "100%",
+                  boxShadow: "0 14px 36px -10px rgba(0, 0, 0, 0.2)",
+                }}
+              >
+                <span
+                  style={{
+                    display: "inline-block",
+                    fontSize: 12,
+                    fontWeight: 700,
+                    textTransform: "uppercase",
+                    letterSpacing: "0.12em",
+                    color: "var(--marigold)",
+                    marginBottom: 14,
+                  }}
+                >
+                  Our Vision
+                </span>
+                <p style={{ fontSize: 16.5, lineHeight: 1.75, margin: 0, color: "rgba(255, 255, 255, 0.95)", fontWeight: 400 }}>
+                  {VISION}
+                </p>
               </div>
             </Reveal>
             <Reveal delay={100}>
-              <div style={{ background: "rgba(246,244,236,0.06)", border: "1px solid rgba(246,244,236,0.14)", borderRadius: 18, padding: 32, height: "100%" }}>
-                <p className="eyebrow" style={{ color: "var(--marigold)" }}>Mission</p>
-                <p style={{ fontSize: 16.5, lineHeight: 1.7, marginTop: 14, color: "rgba(246,244,236,0.9)" }}>{MISSION}</p>
+              <div
+                style={{
+                  background: "rgba(255, 255, 255, 0.08)",
+                  backdropFilter: "blur(10px)",
+                  border: "1px solid rgba(255, 255, 255, 0.16)",
+                  borderRadius: 20,
+                  padding: "clamp(28px, 4vw, 40px)",
+                  height: "100%",
+                  boxShadow: "0 14px 36px -10px rgba(0, 0, 0, 0.2)",
+                }}
+              >
+                <span
+                  style={{
+                    display: "inline-block",
+                    fontSize: 12,
+                    fontWeight: 700,
+                    textTransform: "uppercase",
+                    letterSpacing: "0.12em",
+                    color: "var(--marigold)",
+                    marginBottom: 14,
+                  }}
+                >
+                  Our Mission
+                </span>
+                <p style={{ fontSize: 16.5, lineHeight: 1.75, margin: 0, color: "rgba(255, 255, 255, 0.95)", fontWeight: 400 }}>
+                  {MISSION}
+                </p>
               </div>
             </Reveal>
           </div>
@@ -860,19 +933,109 @@ export default function Home() {
       {/* CTA */}
       <section className="container" style={{ padding: "96px 24px" }}>
         <Reveal>
-          <div style={{
-            background: "var(--marigold)", borderRadius: 24, padding: "52px 40px",
-            display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: 24,
-          }}>
-            <h2 style={{ fontSize: "clamp(22px, 2.8vw, 30px)", fontWeight: 600, color: "var(--canopy-deep)", maxWidth: 600, margin: 0 }}>
-              A rainforest this size doesn't protect itself. Neither did this one the Ekuri people did.
-            </h2>
-            <Link to="/donate" className="btn-lift" style={{
-              padding: "15px 32px", background: "var(--canopy-deep)", color: "#fff", borderRadius: 999,
-              fontWeight: 700, fontSize: 15, textDecoration: "none", whiteSpace: "nowrap",
-            }}>
-              Support the Forest
-            </Link>
+          <div
+            style={{
+              position: "relative",
+              background: "linear-gradient(135deg, #1d6e30 0%, #155424 50%, #0d3816 100%)",
+              borderRadius: 24,
+              padding: "clamp(40px, 5vw, 60px) clamp(32px, 4vw, 56px)",
+              border: "1px solid rgba(255, 255, 255, 0.16)",
+              boxShadow: "0 24px 60px -12px rgba(11, 50, 11, 0.28)",
+              overflow: "hidden",
+              display: "flex",
+              flexWrap: "wrap",
+              alignItems: "center",
+              justifyContent: "space-between",
+              gap: 32,
+            }}
+          >
+            {/* Ambient Background Aura */}
+            <div
+              style={{
+                position: "absolute",
+                top: "-40%",
+                right: "-20%",
+                width: "600px",
+                height: "600px",
+                borderRadius: "50%",
+                background: "radial-gradient(circle, rgba(217, 154, 63, 0.18) 0%, rgba(29, 110, 48, 0) 70%)",
+                pointerEvents: "none",
+              }}
+            />
+
+            {/* Left Column: Heading & Subtitle */}
+            <div style={{ maxWidth: 640, position: "relative", zIndex: 1 }}>
+              <div
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: 8,
+                  padding: "5px 14px",
+                  borderRadius: 999,
+                  background: "rgba(255, 255, 255, 0.12)",
+                  backdropFilter: "blur(8px)",
+                  border: "1px solid rgba(255, 255, 255, 0.2)",
+                  color: "var(--marigold)",
+                  fontSize: 11.5,
+                  fontWeight: 700,
+                  textTransform: "uppercase",
+                  letterSpacing: "0.08em",
+                  marginBottom: 16,
+                }}
+              >
+                {/* <span>🌿 Community-Led Rainforest Stewardship</span> */}
+              </div>
+
+              <h2
+                style={{
+                  fontFamily: "var(--font-serif)",
+                  fontSize: "clamp(24px, 3.2vw, 36px)",
+                  fontWeight: 700,
+                  color: "#ffffff",
+                  lineHeight: 1.3,
+                  margin: "0 0 14px",
+                  letterSpacing: "-0.015em",
+                }}
+              >
+                A rainforest this size doesn’t protect itself. Neither did this one the Ekuri people did.
+              </h2>
+
+              <p
+                style={{
+                  margin: 0,
+                  fontSize: "clamp(14px, 1.6vw, 15.5px)",
+                  color: "rgba(255, 255, 255, 0.88)",
+                  lineHeight: 1.65,
+                }}
+              >
+                Every contribution directly powers 33,600 hectares of community boundary defense, legal advocacy, and sustainable indigenous livelihoods.
+              </p>
+            </div>
+
+            {/* Right Column: High-Contrast CTA Action */}
+            <div style={{ position: "relative", zIndex: 1 }}>
+              <Link
+                to="/donate"
+                className="btn-lift"
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: 10,
+                  padding: "16px 36px",
+                  background: "var(--marigold)",
+                  color: "white",
+                  borderRadius: 999,
+                  fontWeight: 800,
+                  fontSize: 15.5,
+                  textDecoration: "none",
+                  whiteSpace: "nowrap",
+                  boxShadow: "0 10px 28px rgba(0, 0, 0, 0.25)",
+                }}
+              >
+                <span>Support the Forest</span>
+                <ArrowUpRight size={18} />
+              </Link>
+            </div>
           </div>
         </Reveal>
       </section>

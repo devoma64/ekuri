@@ -4,7 +4,6 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
 import PageTransition from "./components/PageTransition";
-import PageLoader from "./components/PageLoader";
 import RouteProgressBar from "./components/RouteProgressBar";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -23,7 +22,6 @@ export default function App() {
 
   return (
     <>
-      <PageLoader />
       <RouteProgressBar />
       <ScrollToTop />
       <Navbar />

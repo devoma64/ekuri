@@ -37,19 +37,91 @@ export default function About() {
       </section>
 
 
-      <section style={{ background: "var(--canopy)", color: "#fff", padding: "80px 24px" }}>
-        <div className="container">
+      {/* VISION / MISSION (BOTANICAL LIGHT GREEN THEME) */}
+      <section
+        style={{
+          position: "relative",
+          background: "linear-gradient(135deg, #1d6e30 0%, #155424 50%, #0d3816 100%)",
+          color: "#ffffff",
+          padding: "88px 24px",
+          overflow: "hidden",
+        }}
+      >
+        {/* Ambient Radial Aura */}
+        <div
+          style={{
+            position: "absolute",
+            top: "-30%",
+            left: "50%",
+            transform: "translateX(-50%)",
+            width: "800px",
+            height: "500px",
+            borderRadius: "50%",
+            background: "radial-gradient(circle, rgba(217, 154, 63, 0.15) 0%, rgba(29, 110, 48, 0) 70%)",
+            pointerEvents: "none",
+          }}
+        />
+
+        <div className="container" style={{ position: "relative", zIndex: 1 }}>
           <div className="vm-grid" style={{ display: "grid", gridTemplateColumns: "1fr", gap: 32 }}>
             <Reveal>
-              <div style={{ background: "rgba(246,244,236,0.06)", border: "1px solid rgba(246,244,236,0.14)", borderRadius: 18, padding: 32, height: "100%" }}>
-                <p className="eyebrow" style={{ color: "var(--marigold)" }}>Vision</p>
-                <p style={{ fontSize: 16.5, lineHeight: 1.7, marginTop: 14, color: "rgba(246,244,236,0.9)" }}>{VISION}</p>
+              <div
+                style={{
+                  background: "rgba(255, 255, 255, 0.08)",
+                  backdropFilter: "blur(10px)",
+                  border: "1px solid rgba(255, 255, 255, 0.16)",
+                  borderRadius: 20,
+                  padding: "clamp(28px, 4vw, 40px)",
+                  height: "100%",
+                  boxShadow: "0 14px 36px -10px rgba(0, 0, 0, 0.2)",
+                }}
+              >
+                <span
+                  style={{
+                    display: "inline-block",
+                    fontSize: 12,
+                    fontWeight: 700,
+                    textTransform: "uppercase",
+                    letterSpacing: "0.12em",
+                    color: "var(--marigold)",
+                    marginBottom: 14,
+                  }}
+                >
+                  Our Vision
+                </span>
+                <p style={{ fontSize: 16.5, lineHeight: 1.75, margin: 0, color: "rgba(255, 255, 255, 0.95)", fontWeight: 400 }}>
+                  {VISION}
+                </p>
               </div>
             </Reveal>
             <Reveal delay={100}>
-              <div style={{ background: "rgba(246,244,236,0.06)", border: "1px solid rgba(246,244,236,0.14)", borderRadius: 18, padding: 32, height: "100%" }}>
-                <p className="eyebrow" style={{ color: "var(--marigold)" }}>Mission</p>
-                <p style={{ fontSize: 16.5, lineHeight: 1.7, marginTop: 14, color: "rgba(246,244,236,0.9)" }}>{MISSION}</p>
+              <div
+                style={{
+                  background: "rgba(255, 255, 255, 0.08)",
+                  backdropFilter: "blur(10px)",
+                  border: "1px solid rgba(255, 255, 255, 0.16)",
+                  borderRadius: 20,
+                  padding: "clamp(28px, 4vw, 40px)",
+                  height: "100%",
+                  boxShadow: "0 14px 36px -10px rgba(0, 0, 0, 0.2)",
+                }}
+              >
+                <span
+                  style={{
+                    display: "inline-block",
+                    fontSize: 12,
+                    fontWeight: 700,
+                    textTransform: "uppercase",
+                    letterSpacing: "0.12em",
+                    color: "var(--marigold)",
+                    marginBottom: 14,
+                  }}
+                >
+                  Our Mission
+                </span>
+                <p style={{ fontSize: 16.5, lineHeight: 1.75, margin: 0, color: "rgba(255, 255, 255, 0.95)", fontWeight: 400 }}>
+                  {MISSION}
+                </p>
               </div>
             </Reveal>
           </div>

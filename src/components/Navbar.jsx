@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { Mail, Menu, X, MapPin } from "lucide-react";
+import { Mail, Menu, X, MapPin, Heart } from "lucide-react";
 import { NAV_LINKS, ORG, CONTACT } from "../data/content";
 
 export default function Navbar() {
@@ -20,31 +20,10 @@ export default function Navbar() {
 
   return (
     <header style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 60 }}>
-      {/* <div
-        style={{
-          background: "var(--canopy-deep)", color: "rgba(246,244,236,0.85)", fontSize: 12.5, padding: "7px 0",
-          display: scrolled ? "none" : "block",
-        }}
-      >
-        <div className="container" style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 8 }}>
-          <div style={{ display: "flex", gap: 18, alignItems: "center", flexWrap: "wrap" }}>
-            <a href={`mailto:${ORG.email}`} style={{ display: "flex", alignItems: "center", gap: 6, textDecoration: "none", color: "inherit" }}>
-              <Mail size={12.5} /> {ORG.email}
-            </a>
-            <span style={{ display: "flex", alignItems: "center", gap: 6 }}>
-              <MapPin size={12.5} /> Akamkpa LGA, Cross River State, Nigeria
-            </span>
-          </div>
-        </div>
-      </div> */}
-
       <div style={{ background: "var(--paper)", boxShadow: scrolled ? "0 6px 24px -18px rgba(11,50,11,0.4)" : "none", transition: "box-shadow .3s ease" }}>
         <div className="container" style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "14px 24px" }}>
           <Link to="/" onClick={closeMenu} style={{ display: "flex", alignItems: "center", gap: 10, textDecoration: "none" }}>
             <img src="/assets/img/ekuri-logo.png" alt="The Ekuri Initiative logo" style={{ height: 48, width: 48, objectFit: "contain" }} />
-            {/* <span style={{ fontFamily: "var(--font-serif)", fontSize: 17.5, fontWeight: 600, color: "var(--ink)", lineHeight: 1.2, maxWidth: 150 }}>
-              Ekuri Initiative
-            </span> */}
           </Link>
 
           <nav className="desktop-nav" style={{ display: "none", gap: 20, alignItems: "center" }}>
@@ -68,9 +47,23 @@ export default function Navbar() {
             <Link
               to="/donate"
               className="donate-desktop btn-lift"
-              style={{ display: "none", padding: "10px 20px", background: "var(--marigold)", color: "var(--canopy-deep)", borderRadius: 999, fontSize: 13.5, fontWeight: 700, textDecoration: "none" }}
+              style={{
+                display: "none",
+                alignItems: "center",
+                gap: 8,
+                padding: "10px 22px",
+                background: "linear-gradient(135deg, #1f7a36 0%, #155e27 100%)",
+                color: "#ffffff",
+                borderRadius: 999,
+                fontSize: 13.5,
+                fontWeight: 700,
+                textDecoration: "none",
+                boxShadow: "0 4px 14px rgba(31, 122, 54, 0.32)",
+                border: "1px solid rgba(255, 255, 255, 0.15)",
+              }}
             >
-              Donate
+              {/* <Heart size={14} fill="currentColor" /> */}
+              <span>Donate</span>
             </Link>
             <button onClick={() => setOpen((v) => !v)} aria-label="Toggle menu" className="menu-btn" style={{ background: "none", border: "none", cursor: "pointer", display: "flex" }}>
               {open ? <X size={24} /> : <Menu size={24} />}
@@ -96,9 +89,23 @@ export default function Navbar() {
                 <Link
                   to="/donate"
                   onClick={closeMenu}
-                  style={{ padding: "12px 20px", background: "var(--marigold)", color: "var(--canopy-deep)", borderRadius: 999, fontSize: 14, fontWeight: 700, textDecoration: "none", textAlign: "center" }}
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    gap: 8,
+                    padding: "14px 20px",
+                    background: "linear-gradient(135deg, #1f7a36 0%, #155e27 100%)",
+                    color: "#ffffff",
+                    borderRadius: 999,
+                    fontSize: 14.5,
+                    fontWeight: 700,
+                    textDecoration: "none",
+                    boxShadow: "0 4px 14px rgba(31, 122, 54, 0.32)",
+                  }}
                 >
-                  Donate
+                  <Heart size={15} fill="currentColor" />
+                  <span>Donate</span>
                 </Link>
               </div>
             </motion.div>

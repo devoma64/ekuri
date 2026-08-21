@@ -301,7 +301,7 @@ export default function Home() {
           >
             <Reveal>
               <p className="eyebrow" style={{ color: "var(--marigold-deep)", marginBottom: 8 }}>
-                Territory & Governance
+                Where we work
               </p>
               <h2
                 style={{
@@ -313,10 +313,10 @@ export default function Home() {
                   letterSpacing: "-0.015em",
                 }}
               >
-                Fourteen Communities, One Sovereign Forest
+                Fourteen communities of the Ekuri Clan
               </h2>
               <p style={{ margin: 0, fontSize: 14.5, color: "var(--ink-soft)", maxWidth: 580 }}>
-                33,600 hectares of contiguous primary rainforest across Akamkpa LGA, buffering the Oban Division of Cross River National Park.
+                We operate across the Ekuri Clan forest communities of Akamkpa Local Government Area all contiguous to Cross River National Park.
               </p>
             </Reveal>
 
@@ -557,7 +557,7 @@ export default function Home() {
           >
             <Reveal>
               <p className="eyebrow" style={{ color: "var(--marigold-deep)", marginBottom: 8 }}>
-                Visual Archive
+                Our Gallery
               </p>
               <h2
                 style={{
@@ -569,10 +569,10 @@ export default function Home() {
                   letterSpacing: "-0.015em",
                 }}
               >
-                Moments in the Living Forest
+                Life, Forest & Stewardship
               </h2>
               <p style={{ margin: 0, fontSize: 14.5, color: "var(--ink-soft)", maxWidth: 560 }}>
-                High-resolution cartography, ancient canopies, and tropical flora preserved by community stewardship.
+                A glimpse into community-led conservation, biodiversity, and daily life across the 33,600 hectares of Ekuri.
               </p>
             </Reveal>
 

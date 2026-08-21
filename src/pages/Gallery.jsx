@@ -1,7 +1,8 @@
 import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence, LayoutGroup } from "framer-motion";
-import { X, ChevronLeft, ChevronRight, ZoomIn, MapPin, ImagePlus } from "lucide-react";
+import { X, ChevronLeft, ChevronRight, ZoomIn, MapPin, ImagePlus, ArrowUpRight } from "lucide-react";
 import PageHeader from "../components/PageHeader";
+import Reveal from "../components/Reveal";
 import { GALLERY_FILTERS, GALLERY_ITEMS } from "../data/content";
 
 export default function Gallery() {
@@ -43,138 +44,194 @@ export default function Gallery() {
   return (
     <>
       <PageHeader
-        title="Gallery"
-        copy="Community meetings, agroforestry, biodiversity, and milestones from the Ekuri Initiative."
+        title="Our Gallery"
+        copy="A visual archive of community forest stewardship, biodiversity, cartography, and sustainable agroforestry across 33,600 hectares."
         crumb="Gallery"
       />
 
-      <section className="section container" style={{ paddingTop: 48, paddingBottom: 96 }}>
-        {/* Category Filters */}
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            gap: 10,
-            flexWrap: "wrap",
-            marginBottom: 44,
-          }}
-        >
-          {GALLERY_FILTERS.map((f) => {
-            const count = f === "All" ? GALLERY_ITEMS.length : GALLERY_ITEMS.filter((g) => g.category === f).length;
-            const isActive = filter === f;
-
-            return (
-              <button
-                key={f}
-                onClick={() => {
-                  setFilter(f);
-                  setActivePhotoIndex(null);
-                }}
-                style={{
-                  padding: "10px 22px",
-                  borderRadius: 999,
-                  border: isActive ? "1px solid var(--canopy)" : "1px solid var(--paper-dim)",
-                  cursor: "pointer",
-                  fontSize: 13.5,
-                  fontWeight: 600,
-                  background: isActive ? "var(--canopy)" : "#fff",
-                  color: isActive ? "#fff" : "var(--ink)",
-                  boxShadow: isActive ? "0 4px 14px -4px rgba(22,104,22,0.4)" : "none",
-                  transition: "all .25s ease",
-                  display: "inline-flex",
-                  alignItems: "center",
-                  gap: 8,
-                }}
-              >
-                {f}
-                <span
-                  style={{
-                    fontSize: 11,
-                    padding: "2px 7px",
-                    borderRadius: 999,
-                    background: isActive ? "rgba(255,255,255,0.22)" : "var(--paper-dim)",
-                    color: isActive ? "#fff" : "var(--ink-soft)",
-                    fontWeight: 700,
-                  }}
-                >
-                  {count}
-                </span>
-              </button>
-            );
-          })}
-        </div>
-
-        {/* Gallery Grid */}
-        <LayoutGroup>
-          <motion.div
-            layout
+      <section style={{ background: "var(--paper)", padding: "56px 24px 104px" }}>
+        <div className="container">
+          {/* Category Filter Bar */}
+          <div
             style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fill, minmax(320px, 1fr))",
-              gap: 24,
+              display: "flex",
+              justifyContent: "center",
+              gap: 8,
+              flexWrap: "wrap",
+              marginBottom: 52,
+              paddingBottom: 24,
+              borderBottom: "1px solid rgba(17, 36, 17, 0.08)",
             }}
           >
-            <AnimatePresence mode="popLayout">
-              {items.map((g, idx) => (
-                <motion.div
-                  key={g.id || g.title}
-                  layout
-                  initial={{ opacity: 0, scale: 0.94 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.94 }}
-                  transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+            {GALLERY_FILTERS.map((f) => {
+              const count = f === "All" ? GALLERY_ITEMS.length : GALLERY_ITEMS.filter((g) => g.category === f).length;
+              const isActive = filter === f;
+
+              return (
+                <button
+                  key={f}
+                  type="button"
+                  onClick={() => {
+                    setFilter(f);
+                    setActivePhotoIndex(null);
+                  }}
+                  style={{
+                    padding: "9px 18px",
+                    borderRadius: 999,
+                    border: isActive ? "1.5px solid var(--canopy)" : "1px solid var(--paper-dim)",
+                    cursor: "pointer",
+                    fontSize: 13,
+                    fontWeight: 700,
+                    background: isActive ? "var(--canopy)" : "#ffffff",
+                    color: isActive ? "#ffffff" : "var(--ink)",
+                    boxShadow: isActive ? "0 4px 12px rgba(11,50,11,0.2)" : "none",
+                    transition: "all .2s ease",
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: 8,
+                  }}
                 >
-                  <div
-                    onClick={() => setActivePhotoIndex(idx)}
-                    className="gallery-card card-lift"
+                  <span>{f}</span>
+                  <span
                     style={{
-                      borderRadius: 18,
-                      overflow: "hidden",
-                      border: "1px solid var(--paper-dim)",
-                      background: "#ffffff",
-                      cursor: "pointer",
-                      display: "flex",
-                      flexDirection: "column",
-                      height: "100%",
+                      fontSize: 11,
+                      padding: "2px 7px",
+                      borderRadius: 999,
+                      background: isActive ? "rgba(255,255,255,0.22)" : "var(--paper-dim)",
+                      color: isActive ? "#ffffff" : "var(--ink-soft)",
+                      fontWeight: 700,
                     }}
                   >
-                    {/* Image Container with Hover Zoom or Blank Placeholder */}
+                    {count}
+                  </span>
+                </button>
+              );
+            })}
+          </div>
+
+          {/* Exhibition Grid (Flat Museum Architecture) */}
+          <LayoutGroup>
+            <motion.div
+              layout
+              className="gallery-editorial-grid"
+              style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(auto-fill, minmax(320px, 1fr))",
+                gap: 32,
+              }}
+            >
+              <AnimatePresence mode="popLayout">
+                {items.map((g, idx) => (
+                  <motion.div
+                    key={g.id || g.title}
+                    layout
+                    initial={{ opacity: 0, y: 12 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, scale: 0.95 }}
+                    transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+                  >
                     <div
+                      onClick={() => setActivePhotoIndex(idx)}
+                      className="gallery-item-card"
                       style={{
-                        position: "relative",
-                        aspectRatio: "4/3",
-                        overflow: "hidden",
-                        background: g.src ? "#162816" : "var(--paper-dim)",
+                        display: "flex",
+                        flexDirection: "column",
+                        cursor: "pointer",
+                        height: "100%",
                       }}
                     >
-                      {g.src ? (
-                        <>
-                          <img
-                            src={g.src}
-                            alt={g.title}
-                            loading="lazy"
+                      {/* Photo Frame (Sharp, Unrounded, Architectural) */}
+                      <div
+                        style={{
+                          position: "relative",
+                          aspectRatio: "16/11",
+                          overflow: "hidden",
+                          background: g.src ? "#081608" : "var(--paper-dim)",
+                          border: "1px solid rgba(17, 36, 17, 0.12)",
+                          marginBottom: 16,
+                        }}
+                      >
+                        {g.src ? (
+                          <>
+                            <img
+                              src={g.src}
+                              alt={g.title}
+                              loading="lazy"
+                              style={{
+                                width: "100%",
+                                height: "100%",
+                                objectFit: "cover",
+                                display: "block",
+                                transition: "transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1)",
+                              }}
+                              className="gallery-thumb-img"
+                            />
+
+                            {/* Museum Index Pill */}
+                            <div
+                              style={{
+                                position: "absolute",
+                                top: 12,
+                                left: 12,
+                                padding: "3px 10px",
+                                background: "rgba(3, 14, 5, 0.75)",
+                                backdropFilter: "blur(6px)",
+                                color: "var(--marigold)",
+                                fontSize: 10.5,
+                                fontWeight: 700,
+                                letterSpacing: "0.08em",
+                                textTransform: "uppercase",
+                              }}
+                            >
+                              {String(idx + 1).padStart(2, "0")} · {g.category}
+                            </div>
+
+                            {/* Hover Overlay with Zoom Icon */}
+                            <div
+                              className="gallery-overlay"
+                              style={{
+                                position: "absolute",
+                                inset: 0,
+                                background: "linear-gradient(to top, rgba(3,14,5,0.75) 0%, rgba(3,14,5,0.15) 60%, transparent 100%)",
+                                opacity: 0,
+                                transition: "opacity 0.3s ease",
+                                display: "flex",
+                                alignItems: "center",
+                                justifyContent: "center",
+                              }}
+                            >
+                              <div
+                                style={{
+                                  padding: "8px 16px",
+                                  borderRadius: 999,
+                                  background: "rgba(255, 255, 255, 0.95)",
+                                  display: "flex",
+                                  alignItems: "center",
+                                  gap: 6,
+                                  color: "var(--canopy-deep)",
+                                  fontSize: 12.5,
+                                  fontWeight: 700,
+                                  boxShadow: "0 6px 20px rgba(0,0,0,0.3)",
+                                }}
+                              >
+                                <ZoomIn size={15} />
+                                <span>Expand Photo</span>
+                              </div>
+                            </div>
+                          </>
+                        ) : (
+                          <div
                             style={{
                               width: "100%",
                               height: "100%",
-                              objectFit: "cover",
-                              display: "block",
-                              transition: "transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1)",
-                            }}
-                            className="gallery-thumb-img"
-                          />
-
-                          {/* Hover Overlay with Icon */}
-                          <div
-                            className="gallery-overlay"
-                            style={{
-                              position: "absolute",
-                              inset: 0,
-                              background: "linear-gradient(to top, rgba(11,36,15,0.75) 0%, rgba(11,36,15,0.15) 60%, transparent 100%)",
-                              opacity: 0,
-                              transition: "opacity 0.3s ease",
                               display: "flex",
+                              flexDirection: "column",
                               alignItems: "center",
                               justifyContent: "center",
+                              gap: 10,
+                              padding: 24,
+                              textAlign: "center",
+                              background: "linear-gradient(135deg, rgba(22,104,22,0.06) 0%, rgba(17,36,17,0.02) 100%)",
                             }}
                           >
                             <div
@@ -182,121 +239,80 @@ export default function Gallery() {
                                 width: 44,
                                 height: 44,
                                 borderRadius: "50%",
-                                background: "rgba(255,255,255,0.9)",
+                                background: "#ffffff",
+                                border: "1px solid var(--paper-dim)",
                                 display: "flex",
                                 alignItems: "center",
                                 justifyContent: "center",
-                                color: "var(--canopy-deep)",
-                                boxShadow: "0 6px 16px rgba(0,0,0,0.25)",
+                                color: "var(--marigold-deep)",
+                                boxShadow: "0 4px 12px rgba(11,50,11,0.06)",
                               }}
                             >
-                              <ZoomIn size={20} />
+                              <ImagePlus size={20} strokeWidth={1.5} />
                             </div>
+                            <span style={{ fontSize: 12, fontWeight: 700, color: "var(--ink-soft)", letterSpacing: "0.04em", textTransform: "uppercase" }}>
+                              Archival Record Pending
+                            </span>
                           </div>
-                        </>
-                      ) : (
-                        <div
-                          style={{
-                            width: "100%",
-                            height: "100%",
-                            display: "flex",
-                            flexDirection: "column",
-                            alignItems: "center",
-                            justifyContent: "center",
-                            gap: 10,
-                            padding: 24,
-                            textAlign: "center",
-                            background: "linear-gradient(135deg, rgba(22,104,22,0.08) 0%, rgba(17,36,17,0.03) 100%)",
-                          }}
-                        >
-                          <div
-                            style={{
-                              width: 48,
-                              height: 48,
-                              borderRadius: "50%",
-                              background: "#ffffff",
-                              border: "1px solid var(--paper-dim)",
-                              display: "flex",
-                              alignItems: "center",
-                              justifyContent: "center",
-                              color: "var(--marigold-deep)",
-                              boxShadow: "0 4px 12px rgba(11,50,11,0.06)",
-                            }}
-                          >
-                            <ImagePlus size={22} strokeWidth={1.5} />
-                          </div>
-                          <span style={{ fontSize: 12, fontWeight: 600, color: "var(--ink-soft)", letterSpacing: "0.02em" }}>
-                            Archival Photo Pending
-                          </span>
-                        </div>
-                      )}
-                    </div>
-
-                    {/* Content Details */}
-                    <div style={{ padding: "18px 20px", display: "flex", flexDirection: "column", flex: 1 }}>
-                      <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 8, gap: 10 }}>
-                        <span
-                          style={{
-                            fontSize: 11.5,
-                            fontWeight: 700,
-                            textTransform: "uppercase",
-                            letterSpacing: "0.08em",
-                            color: "var(--marigold-deep)",
-                          }}
-                        >
-                          {g.category}
-                        </span>
-
-                        {g.location && (
-                          <span
-                            style={{
-                              fontSize: 12,
-                              color: "var(--ink-soft)",
-                              display: "inline-flex",
-                              alignItems: "center",
-                              gap: 4,
-                            }}
-                          >
-                            <MapPin size={12} color="var(--canopy)" />
-                            {g.location}
-                          </span>
                         )}
                       </div>
 
-                      <h3
-                        style={{
-                          fontFamily: "var(--font-serif)",
-                          fontSize: 16.5,
-                          fontWeight: 700,
-                          lineHeight: 1.35,
-                          color: "var(--ink)",
-                          marginBottom: 8,
-                        }}
-                      >
-                        {g.title}
-                      </h3>
+                      {/* Editorial Metadata Beneath Photo */}
+                      <div>
+                        {g.location && (
+                          <div
+                            style={{
+                              fontSize: 12,
+                              color: "var(--marigold-deep)",
+                              fontWeight: 700,
+                              display: "inline-flex",
+                              alignItems: "center",
+                              gap: 4,
+                              marginBottom: 4,
+                            }}
+                          >
+                            <MapPin size={12} />
+                            <span>{g.location}</span>
+                          </div>
+                        )}
 
-                      <p
-                        style={{
-                          fontSize: 13,
-                          lineHeight: 1.55,
-                          color: "var(--ink-soft)",
-                          marginTop: "auto",
-                          display: "-webkit-box",
-                          WebkitLineClamp: 2,
-                          WebkitBoxOrient: "vertical",
-                          overflow: "hidden",
-                        }}
-                      >
-                        {g.description}
-                      </p>
+                        <h3
+                          className="gallery-item-title"
+                          style={{
+                            fontFamily: "var(--font-serif)",
+                            fontSize: 17.5,
+                            fontWeight: 700,
+                            lineHeight: 1.35,
+                            color: "var(--canopy-deep)",
+                            margin: "0 0 6px",
+                            transition: "color .2s ease",
+                          }}
+                        >
+                          {g.title}
+                        </h3>
+
+                        <p
+                          style={{
+                            fontSize: 13.5,
+                            lineHeight: 1.55,
+                            color: "var(--ink-soft)",
+                            margin: 0,
+                            display: "-webkit-box",
+                            WebkitLineClamp: 2,
+                            WebkitBoxOrient: "vertical",
+                            overflow: "hidden",
+                          }}
+                        >
+                          {g.description}
+                        </p>
+                      </div>
                     </div>
-                  </div>
-                </motion.div>
-              ))}
-            </AnimatePresence>
-          </motion.div>
-        </LayoutGroup>
+                  </motion.div>
+                ))}
+              </AnimatePresence>
+            </motion.div>
+          </LayoutGroup>
+        </div>
       </section>
 
       {/* Lightbox / Fullscreen Modal */}
@@ -311,8 +327,8 @@ export default function Gallery() {
             style={{
               position: "fixed",
               inset: 0,
-              zIndex: 9999,
-              background: "rgba(9, 22, 10, 0.92)",
+              zIndex: 99999,
+              background: "rgba(3, 14, 5, 0.92)",
               backdropFilter: "blur(12px)",
               display: "flex",
               alignItems: "center",
@@ -322,21 +338,21 @@ export default function Gallery() {
           >
             {/* Modal Box */}
             <motion.div
-              initial={{ scale: 0.92, opacity: 0 }}
+              initial={{ scale: 0.94, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.92, opacity: 0 }}
-              transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
+              exit={{ scale: 0.94, opacity: 0 }}
+              transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
               onClick={(e) => e.stopPropagation()}
               style={{
                 background: "#ffffff",
-                borderRadius: 24,
+                borderRadius: 20,
                 overflow: "hidden",
                 maxWidth: 960,
                 width: "100%",
                 maxHeight: "92vh",
                 display: "flex",
                 flexDirection: "column",
-                boxShadow: "0 30px 60px -15px rgba(0,0,0,0.5)",
+                boxShadow: "0 30px 60px -15px rgba(0,0,0,0.6)",
                 position: "relative",
               }}
             >
@@ -372,6 +388,7 @@ export default function Gallery() {
                 </div>
 
                 <button
+                  type="button"
                   onClick={() => setActivePhotoIndex(null)}
                   style={{
                     width: 36,
@@ -431,6 +448,7 @@ export default function Gallery() {
                 {/* Left Arrow */}
                 {items.length > 1 && (
                   <button
+                    type="button"
                     onClick={(e) => {
                       e.stopPropagation();
                       setActivePhotoIndex((prev) => (prev > 0 ? prev - 1 : items.length - 1));
@@ -443,7 +461,7 @@ export default function Gallery() {
                       width: 44,
                       height: 44,
                       borderRadius: "50%",
-                      background: "rgba(0,0,0,0.55)",
+                      background: "rgba(0,0,0,0.6)",
                       backdropFilter: "blur(6px)",
                       border: "1px solid rgba(255,255,255,0.2)",
                       color: "#ffffff",
@@ -462,6 +480,7 @@ export default function Gallery() {
                 {/* Right Arrow */}
                 {items.length > 1 && (
                   <button
+                    type="button"
                     onClick={(e) => {
                       e.stopPropagation();
                       setActivePhotoIndex((prev) => (prev < items.length - 1 ? prev + 1 : 0));
@@ -474,7 +493,7 @@ export default function Gallery() {
                       width: 44,
                       height: 44,
                       borderRadius: "50%",
-                      background: "rgba(0,0,0,0.55)",
+                      background: "rgba(0,0,0,0.6)",
                       backdropFilter: "blur(6px)",
                       border: "1px solid rgba(255,255,255,0.2)",
                       color: "#ffffff",
@@ -493,7 +512,7 @@ export default function Gallery() {
 
               {/* Caption & Metadata Footer */}
               <div style={{ padding: "20px 28px 24px", overflowY: "auto" }}>
-                <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 8 }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 6 }}>
                   <h2
                     style={{
                       fontFamily: "var(--font-serif)",
@@ -511,7 +530,7 @@ export default function Gallery() {
                   <p
                     style={{
                       fontSize: 13,
-                      fontWeight: 600,
+                      fontWeight: 700,
                       color: "var(--marigold-deep)",
                       display: "inline-flex",
                       alignItems: "center",
@@ -533,11 +552,14 @@ export default function Gallery() {
       </AnimatePresence>
 
       <style>{`
-        .gallery-card:hover .gallery-thumb-img {
-          transform: scale(1.06);
+        .gallery-item-card:hover .gallery-thumb-img {
+          transform: scale(1.05);
         }
-        .gallery-card:hover .gallery-overlay {
+        .gallery-item-card:hover .gallery-overlay {
           opacity: 1 !important;
+        }
+        .gallery-item-card:hover .gallery-item-title {
+          color: var(--marigold-deep) !important;
         }
       `}</style>
     </>

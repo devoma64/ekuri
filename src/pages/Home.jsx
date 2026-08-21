@@ -277,226 +277,450 @@ export default function Home() {
         </div>
       </section>
 
-      {/* WHERE WE WORK PREVIEW */}
-      <section style={{ background: "var(--paper-dim)", padding: "88px 24px" }}>
+      {/* WHERE WE WORK (EDITORIAL TERRITORY & REGISTRY) */}
+      <section
+        style={{
+          background: "var(--paper-dim)",
+          padding: "96px 24px 104px",
+          borderTop: "1px solid rgba(17, 36, 17, 0.08)",
+        }}
+      >
         <div className="container">
-          <div className="www-grid" style={{ display: "grid", gridTemplateColumns: "1fr", gap: 40, alignItems: "center" }}>
-            <Reveal>
-              <p className="eyebrow">Where we work</p>
-              <h2 style={{ fontSize: "clamp(24px, 3.2vw, 34px)", fontWeight: 600, marginTop: 12, marginBottom: 16 }}>
-                Fourteen communities of the Ekuri Clan
-              </h2>
-              <p style={{ marginBottom: 20 }}>
-                We operate across the Ekuri Clan forest communities of Akamkpa Local Government Area all contiguous to Cross River National Park.
-              </p>
-              <Link to="/where-we-work" style={{ display: "inline-flex", alignItems: "center", gap: 8, color: "var(--marigold-deep)", fontWeight: 700, fontSize: 14.5, textDecoration: "none" }}>
-                See the full map <ArrowUpRight size={15} />
-              </Link>
-            </Reveal>
-            <StaggerGroup style={{ display: "flex", flexWrap: "wrap", gap: 10 }}>
-              {COMMUNITIES.map((c) => (
-                <StaggerItem key={c}>
-                  <span style={{ display: "inline-block", padding: "9px 16px", background: "#fff", border: "1px solid var(--paper-dim)", borderRadius: 999, fontSize: 13, fontWeight: 600, color: "var(--canopy)" }}>
-                    {c}
-                  </span>
-                </StaggerItem>
-              ))}
-            </StaggerGroup>
-          </div>
-        </div>
-        <style>{`
-          @media (min-width: 900px) {
-            .www-grid { grid-template-columns: 0.9fr 1.1fr !important; }
-          }
-        `}</style>
-      </section>
-
-      {/* GALLERY PREVIEW SECTION */}
-      <section style={{ background: "var(--paper)", padding: "96px 24px" }}>
-        <div className="container">
-          <SectionTitle
-            eyebrow="Visual Archive"
-            title="Life, Forest & Stewardship"
-            copy="A glimpse into community-led conservation, biodiversity, and daily life across the 33,600 hectares of Ekuri."
-          />
-
+          {/* Magazine Split Header */}
           <div
-            className="home-gallery-grid"
             style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
-              gap: 22,
+              display: "flex",
+              flexWrap: "wrap",
+              alignItems: "flex-end",
+              justifyContent: "space-between",
+              gap: 24,
+              marginBottom: 48,
+              paddingBottom: 20,
+              borderBottom: "1px solid rgba(17, 36, 17, 0.12)",
             }}
           >
-            {[
-              {
-                title: "Ancient Rainforest Canopy & Landscape",
-                category: "Canopy",
-                src: "/assets/img/hero-bg.jpg",
-                location: "Primary Rainforest",
-              },
-              {
-                title: "Superhighway Threat & Forest Defense Map",
-                category: "Cartography",
-                src: "/assets/img/superhighway-map.jpg",
-                location: "Advocacy Corridor",
-              },
-              {
-                title: "Rainforest Flora & Understory Ecosystem",
-                category: "Biodiversity",
-                src: "/assets/img/ekuri-rainforest-flora.jpg",
-                location: "Ecological Sanctuary",
-              },
-              {
-                title: "Community Farmland & Sustainable Buffer",
-                category: "Agroforestry",
-                src: "/assets/img/ekuri-agroforestry-farming.jpg",
-                location: "Agricultural Buffer",
-              },
-            ].map((photo, idx) => (
-              <Reveal key={photo.title} delay={idx * 80}>
-                <Link
-                  to="/gallery"
-                  className="card-lift"
-                  style={{
-                    display: "block",
-                    position: "relative",
-                    borderRadius: 20,
-                    overflow: "hidden",
-                    height: 290,
-                    textDecoration: "none",
-                    boxShadow: "0 12px 32px -8px rgba(11,50,11,0.12)",
-                    border: "1px solid var(--paper-dim)",
-                    background: "#0c1e0e",
-                  }}
-                >
+            <Reveal>
+              <p className="eyebrow" style={{ color: "var(--marigold-deep)", marginBottom: 8 }}>
+                Territory & Governance
+              </p>
+              <h2
+                style={{
+                  fontSize: "clamp(26px, 3.4vw, 36px)",
+                  fontWeight: 700,
+                  fontFamily: "var(--font-serif)",
+                  color: "var(--canopy-deep)",
+                  margin: "0 0 8px",
+                  letterSpacing: "-0.015em",
+                }}
+              >
+                Fourteen Communities, One Sovereign Forest
+              </h2>
+              <p style={{ margin: 0, fontSize: 14.5, color: "var(--ink-soft)", maxWidth: 580 }}>
+                33,600 hectares of contiguous primary rainforest across Akamkpa LGA, buffering the Oban Division of Cross River National Park.
+              </p>
+            </Reveal>
+
+            <Reveal delay={100}>
+              <Link
+                to="/where-we-work"
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: 8,
+                  fontSize: 14,
+                  fontWeight: 700,
+                  color: "var(--canopy)",
+                  textDecoration: "none",
+                  padding: "10px 20px",
+                  border: "1.5px solid var(--canopy)",
+                  borderRadius: 999,
+                  transition: "all .2s ease",
+                }}
+              >
+                <span>Explore Full Territory & Map</span>
+                <ArrowUpRight size={15} />
+              </Link>
+            </Reveal>
+          </div>
+
+          {/* 2-Column Sharp Architecture: Map Showcase + 14 Communities Registry */}
+          <div
+            className="home-www-layout"
+            style={{
+              display: "grid",
+              gridTemplateColumns: "1fr",
+              gap: 36,
+              alignItems: "stretch",
+            }}
+          >
+            {/* Left: Territory Visual & Metric Facts */}
+            <Reveal>
+              <div
+                style={{
+                  background: "#ffffff",
+                  border: "1px solid rgba(17, 36, 17, 0.12)",
+                  height: "100%",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "space-between",
+                  overflow: "hidden",
+                }}
+              >
+                {/* Map Image Frame */}
+                <div style={{ position: "relative", overflow: "hidden", aspectRatio: "16/10", background: "#0c1e0e" }}>
                   <img
-                    src={photo.src}
-                    alt={photo.title}
+                    src="/assets/img/superhighway-map.jpg"
+                    alt="Ekuri Community Forest Territory Map"
                     style={{
                       width: "100%",
                       height: "100%",
                       objectFit: "cover",
-                      transition: "transform .5s ease",
+                      display: "block",
                     }}
                   />
-                  {/* Gradient Overlay */}
                   <div
                     style={{
                       position: "absolute",
-                      inset: 0,
-                      background: "linear-gradient(180deg, rgba(7,26,7,0.1) 0%, rgba(7,26,7,0.3) 40%, rgba(7,26,7,0.92) 100%)",
-                    }}
-                  />
-                  {/* Category Badge */}
-                  <div
-                    style={{
-                      position: "absolute",
-                      top: 14,
-                      left: 14,
+                      bottom: 12,
+                      left: 12,
+                      padding: "4px 12px",
+                      background: "rgba(3, 14, 5, 0.8)",
+                      backdropFilter: "blur(6px)",
+                      color: "var(--marigold)",
+                      fontSize: 11,
+                      fontWeight: 700,
+                      letterSpacing: "0.08em",
+                      textTransform: "uppercase",
                     }}
                   >
-                    <span
-                      style={{
-                        display: "inline-block",
-                        padding: "4px 12px",
-                        borderRadius: 999,
-                        background: "rgba(0,0,0,0.5)",
-                        backdropFilter: "blur(6px)",
-                        border: "1px solid rgba(255,255,255,0.2)",
-                        color: "var(--marigold)",
-                        fontSize: 11,
-                        fontWeight: 700,
-                        textTransform: "uppercase",
-                        letterSpacing: "0.08em",
-                      }}
-                    >
-                      {photo.category}
-                    </span>
+                    33,600 Hectares Under Community Title
                   </div>
+                </div>
 
-                  {/* Caption */}
-                  <div
-                    style={{
-                      position: "absolute",
-                      bottom: 0,
-                      left: 0,
-                      right: 0,
-                      padding: "20px 18px 16px",
-                      color: "#ffffff",
-                    }}
-                  >
-                    <h3
-                      style={{
-                        fontFamily: "var(--font-serif)",
-                        fontSize: 16.5,
-                        fontWeight: 700,
-                        margin: "0 0 6px",
-                        lineHeight: 1.3,
-                        color: "#ffffff",
-                      }}
-                    >
-                      {photo.title}
-                    </h3>
+                {/* Key Geographic Metrics */}
+                <div
+                  style={{
+                    display: "grid",
+                    gridTemplateColumns: "repeat(3, 1fr)",
+                    borderTop: "1px solid rgba(17, 36, 17, 0.1)",
+                    background: "var(--paper)",
+                  }}
+                >
+                  <div style={{ padding: "18px 16px", borderRight: "1px solid rgba(17, 36, 17, 0.1)" }}>
+                    <div style={{ fontSize: 20, fontWeight: 800, fontFamily: "var(--font-serif)", color: "var(--canopy-deep)" }}>
+                      14
+                    </div>
+                    <div style={{ fontSize: 11.5, color: "var(--ink-soft)", textTransform: "uppercase", letterSpacing: "0.05em", marginTop: 2 }}>
+                      Clan Communities
+                    </div>
+                  </div>
+                  <div style={{ padding: "18px 16px", borderRight: "1px solid rgba(17, 36, 17, 0.1)" }}>
+                    <div style={{ fontSize: 20, fontWeight: 800, fontFamily: "var(--font-serif)", color: "var(--canopy-deep)" }}>
+                      Akamkpa
+                    </div>
+                    <div style={{ fontSize: 11.5, color: "var(--ink-soft)", textTransform: "uppercase", letterSpacing: "0.05em", marginTop: 2 }}>
+                      Local Govt Area
+                    </div>
+                  </div>
+                  <div style={{ padding: "18px 16px" }}>
+                    <div style={{ fontSize: 20, fontWeight: 800, fontFamily: "var(--font-serif)", color: "var(--canopy-deep)" }}>
+                      CRNP
+                    </div>
+                    <div style={{ fontSize: 11.5, color: "var(--ink-soft)", textTransform: "uppercase", letterSpacing: "0.05em", marginTop: 2 }}>
+                      Contiguous Buffer
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Reveal>
+
+            {/* Right: The 14 Communities Registry Grid */}
+            <Reveal delay={100}>
+              <div
+                style={{
+                  background: "#ffffff",
+                  border: "1px solid rgba(17, 36, 17, 0.12)",
+                  padding: "24px 28px",
+                  height: "100%",
+                }}
+              >
+                <div
+                  style={{
+                    fontSize: 12,
+                    fontWeight: 700,
+                    textTransform: "uppercase",
+                    letterSpacing: "0.08em",
+                    color: "var(--marigold-deep)",
+                    marginBottom: 16,
+                    paddingBottom: 12,
+                    borderBottom: "1px solid rgba(17, 36, 17, 0.08)",
+                  }}
+                >
+                  Ekuri Clan Communities Registry
+                </div>
+
+                <div
+                  className="communities-editorial-grid"
+                  style={{
+                    display: "grid",
+                    gridTemplateColumns: "1fr 1fr",
+                    columnGap: 24,
+                    rowGap: 10,
+                  }}
+                >
+                  {COMMUNITIES.map((name, idx) => (
                     <div
+                      key={name}
                       style={{
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "space-between",
-                        fontSize: 12,
-                        color: "rgba(246,244,236,0.75)",
+                        padding: "10px 12px",
+                        borderBottom: "1px solid rgba(17, 36, 17, 0.06)",
+                        transition: "background .15s ease",
                       }}
                     >
-                      <span>{photo.location}</span>
+                      <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+                        <span
+                          style={{
+                            fontFamily: "monospace",
+                            fontSize: 12,
+                            fontWeight: 700,
+                            color: "var(--marigold-deep)",
+                          }}
+                        >
+                          {String(idx + 1).padStart(2, "0")}.
+                        </span>
+                        <span
+                          style={{
+                            fontSize: 14.5,
+                            fontWeight: 700,
+                            color: "var(--canopy-deep)",
+                            fontFamily: "var(--font-serif)",
+                          }}
+                        >
+                          {name}
+                        </span>
+                      </div>
+
                       <span
                         style={{
-                          color: "var(--marigold)",
-                          fontWeight: 600,
-                          display: "inline-flex",
-                          alignItems: "center",
-                          gap: 4,
+                          fontSize: 11,
+                          color: "var(--ink-soft)",
+                          textTransform: "uppercase",
+                          letterSpacing: "0.05em",
                         }}
                       >
-                        View <ArrowUpRight size={13} />
+                        Clan
                       </span>
                     </div>
+                  ))}
+                </div>
+              </div>
+            </Reveal>
+          </div>
+        </div>
+
+        <style>{`
+          @media (min-width: 920px) {
+            .home-www-layout {
+              grid-template-columns: 1fr 1.15fr !important;
+            }
+          }
+          .communities-editorial-grid > div:hover {
+            background: rgba(11, 50, 11, 0.03);
+          }
+        `}</style>
+      </section>
+
+      {/* EDITORIAL GALLERY SECTION (MUSEUM / ARCHIVE LAYOUT) */}
+      <section
+        style={{
+          background: "var(--paper)",
+          padding: "96px 24px 104px",
+          borderTop: "1px solid var(--paper-dim)",
+        }}
+      >
+        <div className="container">
+          {/* Magazine Split Header */}
+          <div
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              alignItems: "flex-end",
+              justifyContent: "space-between",
+              gap: 24,
+              marginBottom: 48,
+              paddingBottom: 20,
+              borderBottom: "1px solid rgba(17, 36, 17, 0.1)",
+            }}
+          >
+            <Reveal>
+              <p className="eyebrow" style={{ color: "var(--marigold-deep)", marginBottom: 8 }}>
+                Visual Archive
+              </p>
+              <h2
+                style={{
+                  fontSize: "clamp(26px, 3.4vw, 36px)",
+                  fontWeight: 700,
+                  fontFamily: "var(--font-serif)",
+                  color: "var(--canopy-deep)",
+                  margin: "0 0 8px",
+                  letterSpacing: "-0.015em",
+                }}
+              >
+                Moments in the Living Forest
+              </h2>
+              <p style={{ margin: 0, fontSize: 14.5, color: "var(--ink-soft)", maxWidth: 560 }}>
+                High-resolution cartography, ancient canopies, and tropical flora preserved by community stewardship.
+              </p>
+            </Reveal>
+
+            <Reveal delay={100}>
+              <Link
+                to="/gallery"
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: 8,
+                  fontSize: 14,
+                  fontWeight: 700,
+                  color: "var(--canopy)",
+                  textDecoration: "none",
+                  padding: "10px 20px",
+                  border: "1.5px solid var(--canopy)",
+                  borderRadius: 999,
+                  transition: "all .2s ease",
+                }}
+              >
+                <span>View Full Gallery</span>
+                <ArrowUpRight size={15} />
+              </Link>
+            </Reveal>
+          </div>
+
+          {/* Clean 4-Column Flat Photo Exhibition Grid */}
+          <div
+            className="home-editorial-grid"
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+              gap: 28,
+            }}
+          >
+            {[
+              {
+                num: "01",
+                category: "PRIMARY CANOPY",
+                title: "Ancient Rainforest Canopy",
+                location: "Central Forest Reserve, Old Ekuri",
+                src: "/assets/img/hero-bg.jpg",
+              },
+              {
+                num: "02",
+                category: "CARTOGRAPHY",
+                title: "Superhighway Threat & Defense Map",
+                location: "Cross River State Protected Corridor",
+                src: "/assets/img/superhighway-map.jpg",
+              },
+              {
+                num: "03",
+                category: "BIODIVERSITY",
+                title: "Rainforest Flora & Understory",
+                location: "Ecological Sanctuary & Watershed",
+                src: "/assets/img/ekuri-rainforest-flora.jpg",
+              },
+              {
+                num: "04",
+                category: "AGROFORESTRY",
+                title: "Community Farmland Buffer Zone",
+                location: "Sustainable Agriculture Perimeter",
+                src: "/assets/img/ekuri-agroforestry-farming.jpg",
+              },
+            ].map((photo, idx) => (
+              <Reveal key={photo.title} delay={idx * 70}>
+                <Link
+                  to="/gallery"
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    textDecoration: "none",
+                    color: "inherit",
+                    group: "true",
+                  }}
+                >
+                  {/* Photo Frame (Sharp, Unrounded, Architectural) */}
+                  <div
+                    style={{
+                      position: "relative",
+                      overflow: "hidden",
+                      aspectRatio: "16/11",
+                      background: "#0c1e0e",
+                      border: "1px solid rgba(17, 36, 17, 0.12)",
+                      marginBottom: 16,
+                    }}
+                  >
+                    <img
+                      src={photo.src}
+                      alt={photo.title}
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "cover",
+                        display: "block",
+                        transition: "transform .5s ease, filter .3s ease",
+                      }}
+                    />
+
+                    {/* Subtle Index Pill */}
+                    <div
+                      style={{
+                        position: "absolute",
+                        top: 12,
+                        left: 12,
+                        padding: "3px 10px",
+                        background: "rgba(3, 14, 5, 0.75)",
+                        backdropFilter: "blur(6px)",
+                        color: "var(--marigold)",
+                        fontSize: 10.5,
+                        fontWeight: 700,
+                        letterSpacing: "0.1em",
+                      }}
+                    >
+                      {photo.num} · {photo.category}
+                    </div>
+                  </div>
+
+                  {/* Caption Beneath Photo */}
+                  <div>
+                    <h3
+                      style={{
+                        fontFamily: "var(--font-serif)",
+                        fontSize: 17,
+                        fontWeight: 700,
+                        color: "var(--canopy-deep)",
+                        margin: "0 0 4px",
+                        lineHeight: 1.35,
+                      }}
+                    >
+                      {photo.title}
+                    </h3>
+                    <p style={{ margin: 0, fontSize: 13, color: "var(--ink-soft)", lineHeight: 1.5 }}>
+                      {photo.location}
+                    </p>
                   </div>
                 </Link>
               </Reveal>
             ))}
           </div>
-
-          <div style={{ textAlign: "center", marginTop: 44 }}>
-            <Link
-              to="/gallery"
-              className="btn-lift"
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: 8,
-                padding: "14px 28px",
-                background: "var(--canopy)",
-                color: "#ffffff",
-                borderRadius: 999,
-                fontWeight: 700,
-                fontSize: 14.5,
-                textDecoration: "none",
-                boxShadow: "0 8px 24px -4px rgba(11,50,11,0.2)",
-              }}
-            >
-              <Camera size={16} /> Explore Complete Photo Gallery <ArrowUpRight size={15} />
-            </Link>
-          </div>
         </div>
 
         <style>{`
-          .home-gallery-grid a:hover img {
-            transform: scale(1.06);
+          .home-editorial-grid a:hover img {
+            transform: scale(1.05);
           }
-          @media (min-width: 960px) {
-            .home-gallery-grid {
-              grid-template-columns: repeat(4, 1fr) !important;
-            }
+          .home-editorial-grid a:hover h3 {
+            color: var(--marigold-deep) !important;
           }
         `}</style>
       </section>

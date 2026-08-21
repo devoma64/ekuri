@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowUpRight, ShieldCheck, Leaf, CloudSun, PawPrint, MapPinned, Wheat, Building2, Megaphone, Compass, GraduationCap } from "lucide-react";
+import { ArrowUpRight, ShieldCheck, Leaf, CloudSun, PawPrint, MapPinned, Wheat, Building2, Megaphone, Compass, GraduationCap, Handshake, Camera } from "lucide-react";
 import HeroVideo from "../components/HeroVideo";
 import Reveal, { StaggerGroup, StaggerItem } from "../components/Reveal";
 import SectionTitle from "../components/SectionTitle";
@@ -307,6 +307,328 @@ export default function Home() {
         <style>{`
           @media (min-width: 900px) {
             .www-grid { grid-template-columns: 0.9fr 1.1fr !important; }
+          }
+        `}</style>
+      </section>
+
+      {/* GALLERY PREVIEW SECTION */}
+      <section style={{ background: "var(--paper)", padding: "96px 24px" }}>
+        <div className="container">
+          <SectionTitle
+            eyebrow="Visual Archive"
+            title="Life, Forest & Stewardship"
+            copy="A glimpse into community-led conservation, biodiversity, and daily life across the 33,600 hectares of Ekuri."
+          />
+
+          <div
+            className="home-gallery-grid"
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+              gap: 22,
+            }}
+          >
+            {[
+              {
+                title: "Ancient Rainforest Canopy & Landscape",
+                category: "Canopy",
+                src: "/assets/img/hero-bg.jpg",
+                location: "Primary Rainforest",
+              },
+              {
+                title: "Superhighway Threat & Forest Defense Map",
+                category: "Cartography",
+                src: "/assets/img/superhighway-map.jpg",
+                location: "Advocacy Corridor",
+              },
+              {
+                title: "Rainforest Flora & Understory Ecosystem",
+                category: "Biodiversity",
+                src: "/assets/img/ekuri-rainforest-flora.jpg",
+                location: "Ecological Sanctuary",
+              },
+              {
+                title: "Community Farmland & Sustainable Buffer",
+                category: "Agroforestry",
+                src: "/assets/img/ekuri-agroforestry-farming.jpg",
+                location: "Agricultural Buffer",
+              },
+            ].map((photo, idx) => (
+              <Reveal key={photo.title} delay={idx * 80}>
+                <Link
+                  to="/gallery"
+                  className="card-lift"
+                  style={{
+                    display: "block",
+                    position: "relative",
+                    borderRadius: 20,
+                    overflow: "hidden",
+                    height: 290,
+                    textDecoration: "none",
+                    boxShadow: "0 12px 32px -8px rgba(11,50,11,0.12)",
+                    border: "1px solid var(--paper-dim)",
+                    background: "#0c1e0e",
+                  }}
+                >
+                  <img
+                    src={photo.src}
+                    alt={photo.title}
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                      transition: "transform .5s ease",
+                    }}
+                  />
+                  {/* Gradient Overlay */}
+                  <div
+                    style={{
+                      position: "absolute",
+                      inset: 0,
+                      background: "linear-gradient(180deg, rgba(7,26,7,0.1) 0%, rgba(7,26,7,0.3) 40%, rgba(7,26,7,0.92) 100%)",
+                    }}
+                  />
+                  {/* Category Badge */}
+                  <div
+                    style={{
+                      position: "absolute",
+                      top: 14,
+                      left: 14,
+                    }}
+                  >
+                    <span
+                      style={{
+                        display: "inline-block",
+                        padding: "4px 12px",
+                        borderRadius: 999,
+                        background: "rgba(0,0,0,0.5)",
+                        backdropFilter: "blur(6px)",
+                        border: "1px solid rgba(255,255,255,0.2)",
+                        color: "var(--marigold)",
+                        fontSize: 11,
+                        fontWeight: 700,
+                        textTransform: "uppercase",
+                        letterSpacing: "0.08em",
+                      }}
+                    >
+                      {photo.category}
+                    </span>
+                  </div>
+
+                  {/* Caption */}
+                  <div
+                    style={{
+                      position: "absolute",
+                      bottom: 0,
+                      left: 0,
+                      right: 0,
+                      padding: "20px 18px 16px",
+                      color: "#ffffff",
+                    }}
+                  >
+                    <h3
+                      style={{
+                        fontFamily: "var(--font-serif)",
+                        fontSize: 16.5,
+                        fontWeight: 700,
+                        margin: "0 0 6px",
+                        lineHeight: 1.3,
+                        color: "#ffffff",
+                      }}
+                    >
+                      {photo.title}
+                    </h3>
+                    <div
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "space-between",
+                        fontSize: 12,
+                        color: "rgba(246,244,236,0.75)",
+                      }}
+                    >
+                      <span>{photo.location}</span>
+                      <span
+                        style={{
+                          color: "var(--marigold)",
+                          fontWeight: 600,
+                          display: "inline-flex",
+                          alignItems: "center",
+                          gap: 4,
+                        }}
+                      >
+                        View <ArrowUpRight size={13} />
+                      </span>
+                    </div>
+                  </div>
+                </Link>
+              </Reveal>
+            ))}
+          </div>
+
+          <div style={{ textAlign: "center", marginTop: 44 }}>
+            <Link
+              to="/gallery"
+              className="btn-lift"
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: 8,
+                padding: "14px 28px",
+                background: "var(--canopy)",
+                color: "#ffffff",
+                borderRadius: 999,
+                fontWeight: 700,
+                fontSize: 14.5,
+                textDecoration: "none",
+                boxShadow: "0 8px 24px -4px rgba(11,50,11,0.2)",
+              }}
+            >
+              <Camera size={16} /> Explore Complete Photo Gallery <ArrowUpRight size={15} />
+            </Link>
+          </div>
+        </div>
+
+        <style>{`
+          .home-gallery-grid a:hover img {
+            transform: scale(1.06);
+          }
+          @media (min-width: 960px) {
+            .home-gallery-grid {
+              grid-template-columns: repeat(4, 1fr) !important;
+            }
+          }
+        `}</style>
+      </section>
+
+      {/* PARTNERS DEDICATED FULL SECTION */}
+      <section
+        style={{
+          padding: "96px 0 104px",
+          background: "linear-gradient(180deg, #ffffff 0%, var(--paper) 100%)",
+          borderTop: "1px solid var(--paper-dim)",
+          borderBottom: "1px solid var(--paper-dim)",
+          overflow: "hidden",
+        }}
+      >
+        <div className="container" style={{ marginBottom: 52, textAlign: "center" }}>
+          <Reveal>
+            <p className="eyebrow" style={{ color: "var(--marigold-deep)" }}>
+              Institutional Alliances
+            </p>
+            <h2
+              style={{
+                fontSize: "clamp(26px, 3.4vw, 36px)",
+                fontWeight: 700,
+                fontFamily: "var(--font-serif)",
+                color: "var(--canopy-deep)",
+                marginTop: 12,
+                marginBottom: 14,
+              }}
+            >
+              Our Conservation & Governance Partners
+            </h2>
+            <p
+              style={{
+                maxWidth: 640,
+                margin: "0 auto",
+                fontSize: "clamp(14.5px, 1.6vw, 16px)",
+                color: "var(--ink-soft)",
+                lineHeight: 1.65,
+              }}
+            >
+              Collaborating with international foundations, ecological scientists, and statutory agencies to safeguard West Africa's flagship community rainforest.
+            </p>
+          </Reveal>
+        </div>
+
+        {/* Marquee Track Container with luxury edge fades */}
+        <div
+          style={{
+            position: "relative",
+            width: "100%",
+            overflow: "hidden",
+            padding: "16px 0",
+            maskImage: "linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%)",
+            WebkitMaskImage: "linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%)",
+          }}
+        >
+          <div className="partner-marquee-track" style={{ display: "flex", gap: 28, width: "max-content" }}>
+            {[...PARTNERS, ...PARTNERS].map((p, idx) => (
+              <div
+                key={`${p.name}-${idx}`}
+                className="card-lift"
+                title={p.name}
+                aria-label={p.name}
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  width: 230,
+                  height: 115,
+                  padding: "18px 28px",
+                  background: "#ffffff",
+                  border: "1.5px solid var(--paper-dim)",
+                  borderRadius: 20,
+                  flexShrink: 0,
+                  boxShadow: "0 10px 30px -6px rgba(11,50,11,0.08)",
+                  transition: "transform .25s ease, box-shadow .25s ease, border-color .25s ease",
+                  cursor: "pointer",
+                }}
+              >
+                <img
+                  src={p.logo}
+                  alt={p.name}
+                  style={{
+                    maxWidth: "100%",
+                    maxHeight: "100%",
+                    width: "auto",
+                    height: "auto",
+                    objectFit: "contain",
+                    filter: "grayscale(15%) contrast(105%)",
+                    transition: "filter .25s ease, transform .25s ease",
+                  }}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div style={{ textAlign: "center", marginTop: 44 }}>
+          <Link
+            to="/partners"
+            style={{
+              fontSize: 14.5,
+              fontWeight: 700,
+              color: "var(--marigold-deep)",
+              textDecoration: "none",
+              display: "inline-flex",
+              alignItems: "center",
+              gap: 6,
+            }}
+          >
+            View partner roles & history <ArrowUpRight size={15} />
+          </Link>
+        </div>
+
+        <style>{`
+          @keyframes partnerScrollLeft {
+            0% {
+              transform: translateX(0);
+            }
+            100% {
+              transform: translateX(-50%);
+            }
+          }
+          .partner-marquee-track {
+            animation: partnerScrollLeft 28s linear infinite;
+          }
+          .partner-marquee-track:hover {
+            animation-play-state: paused;
+          }
+          .card-lift:hover img {
+            filter: grayscale(0%) contrast(110%) !important;
+            transform: scale(1.05);
           }
         `}</style>
       </section>

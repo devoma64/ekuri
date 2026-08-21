@@ -68,12 +68,36 @@ export const MANAGEMENT = [
 ];
 
 export const PARTNERS = [
-  { name: "Cross River National Park", copy: "Akamkpa, Cross River State co-manager of the buffer-zone relationship and a long-time technical partner." },
-  { name: "Cross River State Forestry Commission", copy: "Calabar the state body responsible for forest law, licensing, and conservation policy." },
-  { name: "UNDP Equator Initiative", copy: "Awarded the Ekuri Initiative the Equator Prize in 2004 for outstanding community-based conservation." },
-  { name: "Ford Foundation", copy: "Funded the original perimeter survey, land use plan, and multiple community forestry initiatives." },
-  { name: "World Wildlife Fund (WWF)", copy: "Advocated for the protection of Cross River National Park and the Ekuri forest during the Superhighway dispute." },
-  { name: "Wildlife Conservation Society (WCS)", copy: "Provided technical mapping and analysis of threats to Ekuri and Cross River National Park." },
+  {
+    name: "World Wildlife Fund (WWF)",
+    logo: "/assets/img/partners/wwf.svg",
+    copy: "Advocated for the protection of Cross River National Park and the Ekuri forest during the Superhighway dispute.",
+  },
+  {
+    name: "UNDP Equator Initiative",
+    logo: "/assets/img/partners/undp.svg",
+    copy: "Awarded the Ekuri Initiative the Equator Prize in 2004 for outstanding community-based conservation.",
+  },
+  {
+    name: "Ford Foundation",
+    logo: "/assets/img/partners/ford-foundation.svg",
+    copy: "Funded the original perimeter survey, land use plan, and multiple community forestry initiatives.",
+  },
+  {
+    name: "Wildlife Conservation Society (WCS)",
+    logo: "/assets/img/partners/wcs.svg",
+    copy: "Provided technical mapping and analysis of threats to Ekuri and Cross River National Park.",
+  },
+  {
+    name: "Cross River National Park",
+    logo: "/assets/img/partners/crnp.jpg",
+    copy: "Akamkpa, Cross River State co-manager of the buffer-zone relationship and a long-time technical partner.",
+  },
+  {
+    name: "Cross River State Forestry Commission",
+    logo: "/assets/img/partners/crsfc.svg",
+    copy: "Calabar the state body responsible for forest law, licensing, and conservation policy.",
+  },
 ];
 
 export const CONTACT = {

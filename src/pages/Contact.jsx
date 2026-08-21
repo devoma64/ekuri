@@ -73,7 +73,7 @@ export default function Contact() {
     <>
       <PageHeader
         title="Contact Us"
-        copy="Questions, partnerships, press, or research inquiries — we read every message."
+        copy="Questions, partnerships, press, or research inquiries we read every message."
         crumb="Contact"
         bgImage="/assets/img/ekuri-rainforest-flora.jpg"
       />

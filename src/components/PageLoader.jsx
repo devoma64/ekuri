@@ -2,11 +2,9 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 /**
- * Premium PageLoader for The Ekuri Initiative
- * - Full-screen initial brand reveal with animated logo pulse, glowing canopy ring,
- *   subtle rainforest particle ambience, and sleek progress counter.
- * - Smooth curtain exit reveal into the main site.
- * - Top route transition bar for instant feedback during client-side navigation.
+ * Deep Obsidian & Warm Gold Page Loader
+ * Ultra-sleek luxury dark forest backdrop, glowing champagne-gold accents,
+ * frosted medallion brand badge, and precision progress indicator.
  */
 export default function PageLoader({ onLoaded, minDuration = 1800 }) {
   const [progress, setProgress] = useState(0);
@@ -24,7 +22,7 @@ export default function PageLoader({ onLoaded, minDuration = 1800 }) {
         setTimeout(() => {
           setIsFinished(true);
           if (onLoaded) onLoaded();
-        }, 300);
+        }, 320);
       }
     }, 25);
 
@@ -39,13 +37,13 @@ export default function PageLoader({ onLoaded, minDuration = 1800 }) {
           initial={{ opacity: 1 }}
           exit={{
             y: "-100%",
-            transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1] },
+            transition: { duration: 0.85, ease: [0.76, 0, 0.24, 1] },
           }}
           style={{
             position: "fixed",
             inset: 0,
             zIndex: 99999,
-            background: "radial-gradient(ellipse at 50% 45%, #134816 0%, #0b320b 65%, #061e06 100%)",
+            background: "radial-gradient(ellipse at 50% 40%, #0d1e10 0%, #071309 55%, #030804 100%)",
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
@@ -55,15 +53,16 @@ export default function PageLoader({ onLoaded, minDuration = 1800 }) {
             userSelect: "none",
           }}
         >
-          {/* Subtle atmospheric ambient glow */}
+          {/* Subtle warm champagne atmospheric ambient glow */}
           <div
             style={{
               position: "absolute",
-              width: 500,
-              height: 500,
+              width: 560,
+              height: 560,
               borderRadius: "50%",
-              background: "radial-gradient(circle, rgba(217,154,63,0.14) 0%, rgba(22,104,22,0.2) 50%, transparent 70%)",
-              filter: "blur(40px)",
+              background:
+                "radial-gradient(circle, rgba(217, 154, 63, 0.12) 0%, rgba(18, 50, 20, 0.16) 45%, transparent 70%)",
+              filter: "blur(50px)",
               pointerEvents: "none",
             }}
           />
@@ -80,63 +79,64 @@ export default function PageLoader({ onLoaded, minDuration = 1800 }) {
               padding: "0 24px",
             }}
           >
-            {/* Logo with pulsating aura rings */}
-            <div style={{ position: "relative", width: 100, height: 100, marginBottom: 28 }}>
-              {/* Outer pulsing ring */}
+            {/* Logo Medallion with pulsing gold halo */}
+            <div style={{ position: "relative", width: 104, height: 104, marginBottom: 28 }}>
+              {/* Outer pulsing gold ring */}
               <motion.div
                 animate={{
-                  scale: [1, 1.28, 1],
-                  opacity: [0.25, 0.6, 0.25],
+                  scale: [1, 1.25, 1],
+                  opacity: [0.2, 0.55, 0.2],
                 }}
                 transition={{
                   repeat: Infinity,
-                  duration: 2.4,
+                  duration: 2.6,
                   ease: "easeInOut",
                 }}
                 style={{
                   position: "absolute",
                   inset: -8,
                   borderRadius: "50%",
-                  border: "1.5px solid var(--marigold, #d99a3f)",
+                  border: "1px solid rgba(217, 154, 63, 0.6)",
                   pointerEvents: "none",
                 }}
               />
 
-              {/* Second soft ring */}
+              {/* Second subtle dashed orbital ring */}
               <motion.div
                 animate={{
                   rotate: 360,
                 }}
                 transition={{
                   repeat: Infinity,
-                  duration: 12,
+                  duration: 16,
                   ease: "linear",
                 }}
                 style={{
                   position: "absolute",
-                  inset: -14,
+                  inset: -16,
                   borderRadius: "50%",
-                  border: "1px dashed rgba(246,244,236,0.2)",
+                  border: "1px dashed rgba(217, 154, 63, 0.2)",
                   pointerEvents: "none",
                 }}
               />
 
-              {/* Central Logo Box */}
+              {/* Central Frosted Glass Medallion */}
               <motion.div
-                initial={{ scale: 0.8, opacity: 0 }}
+                initial={{ scale: 0.82, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
-                transition={{ duration: 0.6, ease: "easeOut" }}
+                transition={{ duration: 0.7, ease: "easeOut" }}
                 style={{
                   width: "100%",
                   height: "100%",
                   borderRadius: "50%",
-                  background: "rgba(246,244,236,0.06)",
-                  backdropFilter: "blur(12px)",
-                  border: "1.5px solid rgba(217,154,63,0.4)",
+                  background: "rgba(13, 30, 16, 0.75)",
+                  backdropFilter: "blur(16px)",
+                  border: "1.5px solid rgba(217, 154, 63, 0.5)",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  boxShadow: "0 12px 36px -10px rgba(0,0,0,0.6), 0 0 24px rgba(217,154,63,0.2)",
+                  boxShadow:
+                    "0 16px 40px -10px rgba(0,0,0,0.85), 0 0 28px rgba(217, 154, 63, 0.2)",
                   padding: 14,
                 }}
               >
@@ -147,53 +147,54 @@ export default function PageLoader({ onLoaded, minDuration = 1800 }) {
                     width: "100%",
                     height: "100%",
                     objectFit: "contain",
-                    filter: "drop-shadow(0 2px 8px rgba(0,0,0,0.4))",
+                    filter: "drop-shadow(0 2px 10px rgba(0,0,0,0.6))",
                   }}
                 />
               </motion.div>
             </div>
 
-            {/* Title */}
+            {/* Brand Title */}
             <motion.h1
               initial={{ y: 16, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.15, duration: 0.6 }}
+              transition={{ delay: 0.15, duration: 0.65 }}
               style={{
                 fontFamily: "var(--font-serif)",
-                fontSize: "clamp(24px, 4vw, 32px)",
+                fontSize: "clamp(22px, 3.8vw, 30px)",
                 fontWeight: 700,
-                letterSpacing: "0.04em",
+                letterSpacing: "0.1em",
                 color: "#ffffff",
                 margin: 0,
                 textTransform: "uppercase",
+                textShadow: "0 2px 20px rgba(0,0,0,0.7), 0 0 30px rgba(217,154,63,0.25)",
               }}
             >
-              Ekuri Initiative
+              The Ekuri Initiative
             </motion.h1>
 
-            {/* Subtitle / Tagline */}
+            {/* Tagline */}
             <motion.p
               initial={{ y: 12, opacity: 0 }}
-              animate={{ y: 0, opacity: 0.8 }}
-              transition={{ delay: 0.25, duration: 0.6 }}
+              animate={{ y: 0, opacity: 0.85 }}
+              transition={{ delay: 0.25, duration: 0.65 }}
               style={{
-                fontSize: 13,
+                fontSize: 12.5,
                 fontFamily: "var(--font-sans)",
-                color: "rgba(246, 244, 236, 0.75)",
+                color: "rgba(246, 244, 236, 0.72)",
                 letterSpacing: "0.14em",
                 textTransform: "uppercase",
-                marginTop: 8,
-                marginBottom: 32,
+                marginTop: 10,
+                marginBottom: 34,
                 fontWeight: 500,
               }}
             >
-              33,600 Hectares · Community Rainforest
+              Est. 1992 · 33,600 Hectares · Community Rainforest
             </motion.p>
 
-            {/* Progress Bar Container */}
+            {/* Precision Gold Progress Bar Container */}
             <div
               style={{
-                width: "min(280px, 80vw)",
+                width: "min(300px, 82vw)",
                 position: "relative",
                 display: "flex",
                 flexDirection: "column",
@@ -205,19 +206,20 @@ export default function PageLoader({ onLoaded, minDuration = 1800 }) {
               <div
                 style={{
                   width: "100%",
-                  height: 3,
-                  background: "rgba(246,244,236,0.12)",
+                  height: 3.5,
+                  background: "rgba(255, 255, 255, 0.08)",
                   borderRadius: 999,
                   overflow: "hidden",
                   position: "relative",
+                  border: "1px solid rgba(255, 255, 255, 0.04)",
                 }}
               >
                 <motion.div
                   style={{
                     height: "100%",
                     width: `${progress}%`,
-                    background: "linear-gradient(90deg, #b47f2f, #d99a3f, #f7d28b)",
-                    boxShadow: "0 0 10px rgba(217, 154, 63, 0.8)",
+                    background: "linear-gradient(90deg, #966723 0%, #d99a3f 50%, #fce09b 100%)",
+                    boxShadow: "0 0 14px rgba(217, 154, 63, 0.85)",
                     borderRadius: 999,
                     transition: "width 0.05s linear",
                   }}
@@ -232,28 +234,32 @@ export default function PageLoader({ onLoaded, minDuration = 1800 }) {
                   justifyContent: "space-between",
                   fontSize: 11.5,
                   fontFamily: "var(--font-sans)",
-                  color: "rgba(246,244,236,0.6)",
-                  letterSpacing: "0.06em",
+                  color: "rgba(246, 244, 236, 0.55)",
+                  letterSpacing: "0.08em",
+                  textTransform: "uppercase",
                 }}
               >
-                <span>Protecting since 1992</span>
-                <span style={{ color: "var(--marigold, #d99a3f)", fontWeight: 600 }}>{progress}%</span>
+                <span>Protecting Since 1992</span>
+                <span style={{ color: "var(--marigold, #d99a3f)", fontWeight: 700 }}>
+                  {progress}%
+                </span>
               </div>
             </div>
           </div>
 
-          {/* Bottom decorative coordinates / credit */}
+          {/* Bottom coordinates / credit */}
           <motion.div
             initial={{ opacity: 0 }}
-            animate={{ opacity: 0.4 }}
+            animate={{ opacity: 0.45 }}
             transition={{ delay: 0.4, duration: 0.8 }}
             style={{
               position: "absolute",
               bottom: 24,
               fontSize: 11,
-              letterSpacing: "0.1em",
+              fontFamily: "var(--font-sans)",
+              letterSpacing: "0.14em",
               textTransform: "uppercase",
-              color: "rgba(246,244,236,0.5)",
+              color: "rgba(246, 244, 236, 0.5)",
               textAlign: "center",
             }}
           >

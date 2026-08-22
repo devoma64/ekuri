@@ -17,6 +17,10 @@ import {
   ChevronRight,
   FolderOpen,
   BookOpen,
+  X,
+  Sparkles,
+  Shield,
+  HeartHandshake,
 } from "lucide-react";
 import PageHeader from "../components/PageHeader";
 import Reveal from "../components/Reveal";
@@ -644,105 +648,253 @@ export default function News() {
             </main>
 
             {/* =========================================================================
-                RIGHT SIDEBAR (Classic PADIC Africa Style Widgets)
+                RIGHT SIDEBAR (Enhanced Museum & Editorial Grade)
                ========================================================================= */}
-            <aside style={{ display: "flex", flexDirection: "column", gap: 28 }}>
+            <aside className="blog-sidebar-sticky" style={{ display: "flex", flexDirection: "column", gap: 32 }}>
               {/* Widget 1: Search Bar */}
               <div
                 style={{
-                  background: "#fff",
-                  borderRadius: 14,
-                  padding: "24px",
-                  border: "1px solid var(--paper-dim)",
-                  boxShadow: "0 2px 10px rgba(0,0,0,0.02)",
+                  background: "#ffffff",
+                  borderRadius: 18,
+                  padding: "26px 24px",
+                  border: "1px solid rgba(17, 36, 17, 0.08)",
+                  boxShadow: "0 10px 30px -10px rgba(11, 50, 11, 0.06)",
                 }}
               >
-                <h3 style={{ fontSize: 15, fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.05em", color: "var(--canopy)", marginBottom: 14 }}>
-                  Search Blog
-                </h3>
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 14 }}>
+                  <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                    <div
+                      style={{
+                        width: 28,
+                        height: 28,
+                        borderRadius: 8,
+                        background: "rgba(217, 154, 63, 0.14)",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        color: "var(--marigold-deep)",
+                      }}
+                    >
+                      <Search size={15} />
+                    </div>
+                    <h3
+                      style={{
+                        fontSize: 14,
+                        fontWeight: 700,
+                        textTransform: "uppercase",
+                        letterSpacing: "0.08em",
+                        color: "var(--canopy-deep)",
+                        margin: 0,
+                      }}
+                    >
+                      Search Archive
+                    </h3>
+                  </div>
+                  {searchQuery && (
+                    <button
+                      onClick={() => setSearchQuery("")}
+                      style={{
+                        background: "none",
+                        border: "none",
+                        color: "var(--ink-soft)",
+                        fontSize: 12,
+                        cursor: "pointer",
+                        display: "flex",
+                        alignItems: "center",
+                        gap: 3,
+                        padding: 0,
+                      }}
+                    >
+                      <X size={13} /> Clear
+                    </button>
+                  )}
+                </div>
+
                 <div style={{ position: "relative" }}>
                   <input
                     type="text"
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
-                    placeholder="Type keyword & search..."
+                    placeholder="Search articles, topics, authors..."
                     style={{
                       width: "100%",
-                      padding: "11px 40px 11px 14px",
-                      borderRadius: 8,
-                      border: "1px solid var(--paper-dim)",
+                      padding: "13px 42px 13px 16px",
+                      borderRadius: 10,
+                      border: "1.5px solid var(--paper-dim)",
                       background: "var(--paper)",
-                      fontSize: 13.5,
+                      fontSize: 14,
                       color: "var(--ink)",
                       outline: "none",
+                      transition: "border-color .2s ease, box-shadow .2s ease",
                     }}
+                    className="blog-search-input"
                   />
                   <Search
-                    size={16}
+                    size={18}
                     color="var(--ink-soft)"
-                    style={{ position: "absolute", right: 14, top: "50%", transform: "translateY(-50%)" }}
+                    style={{ position: "absolute", right: 14, top: "50%", transform: "translateY(-50%)", pointerEvents: "none" }}
                   />
                 </div>
+
+                {searchQuery && (
+                  <div
+                    style={{
+                      marginTop: 12,
+                      padding: "6px 12px",
+                      borderRadius: 6,
+                      background: "rgba(11, 50, 11, 0.05)",
+                      fontSize: 12,
+                      color: "var(--canopy-deep)",
+                      fontWeight: 600,
+                    }}
+                  >
+                    Found {filteredPosts.length} dispatch{filteredPosts.length === 1 ? "" : "es"}
+                  </div>
+                )}
               </div>
 
-              {/* Widget 2: Recent Posts */}
+              {/* Widget 2: Recent Dispatches (Rich Cover Media) */}
               <div
                 style={{
-                  background: "#fff",
-                  borderRadius: 14,
-                  padding: "24px",
-                  border: "1px solid var(--paper-dim)",
-                  boxShadow: "0 2px 10px rgba(0,0,0,0.02)",
+                  background: "#ffffff",
+                  borderRadius: 18,
+                  padding: "28px 24px",
+                  border: "1px solid rgba(17, 36, 17, 0.08)",
+                  boxShadow: "0 10px 30px -10px rgba(11, 50, 11, 0.06)",
                 }}
               >
-                <h3 style={{ fontSize: 15, fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.05em", color: "var(--canopy)", marginBottom: 16 }}>
-                  Recent Posts
-                </h3>
-                <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 20, paddingBottom: 12, borderBottom: "1px solid rgba(17, 36, 17, 0.06)" }}>
+                  <div
+                    style={{
+                      width: 28,
+                      height: 28,
+                      borderRadius: 8,
+                      background: "rgba(217, 154, 63, 0.14)",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      color: "var(--marigold-deep)",
+                    }}
+                  >
+                    <BookOpen size={15} />
+                  </div>
+                  <h3
+                    style={{
+                      fontSize: 14,
+                      fontWeight: 700,
+                      textTransform: "uppercase",
+                      letterSpacing: "0.08em",
+                      color: "var(--canopy-deep)",
+                      margin: 0,
+                    }}
+                  >
+                    Recent Dispatches
+                  </h3>
+                </div>
+
+                <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
                   {recentPosts.map((post) => (
                     <div
                       key={post.id}
                       onClick={() => handleSelectPost(post.id)}
+                      className="recent-post-card"
                       style={{
-                        display: "flex",
-                        alignItems: "flex-start",
-                        gap: 12,
+                        display: "grid",
+                        gridTemplateColumns: "72px 1fr",
+                        gap: 14,
                         cursor: "pointer",
-                        paddingBottom: 12,
-                        borderBottom: "1px solid var(--paper-dim)",
+                        alignItems: "center",
                       }}
                     >
+                      {/* Post Thumbnail */}
                       <div
                         style={{
-                          width: 36,
-                          height: 36,
-                          borderRadius: 8,
-                          background: "var(--paper)",
-                          display: "flex",
-                          alignItems: "center",
-                          justifyContent: "center",
+                          width: 72,
+                          height: 72,
+                          borderRadius: 10,
+                          overflow: "hidden",
+                          background: "#0c1e0e",
+                          border: "1px solid rgba(17, 36, 17, 0.1)",
                           flexShrink: 0,
-                          color: "var(--canopy)",
                         }}
                       >
-                        <BookOpen size={16} />
+                        {post.image ? (
+                          <img
+                            src={post.image}
+                            alt={post.title}
+                            loading="lazy"
+                            style={{
+                              width: "100%",
+                              height: "100%",
+                              objectFit: "cover",
+                              display: "block",
+                              transition: "transform .4s ease",
+                            }}
+                            className="recent-thumb-img"
+                          />
+                        ) : (
+                          <div
+                            style={{
+                              width: "100%",
+                              height: "100%",
+                              display: "flex",
+                              alignItems: "center",
+                              justifyContent: "center",
+                              color: "var(--marigold)",
+                              background: "linear-gradient(135deg, #1d6e30 0%, #0d3816 100%)",
+                            }}
+                          >
+                            <BookOpen size={20} />
+                          </div>
+                        )}
                       </div>
+
+                      {/* Post Title & Meta */}
                       <div style={{ minWidth: 0 }}>
+                        <span
+                          style={{
+                            fontSize: 10.5,
+                            fontWeight: 700,
+                            color: "var(--marigold-deep)",
+                            textTransform: "uppercase",
+                            letterSpacing: "0.06em",
+                            display: "block",
+                            marginBottom: 4,
+                          }}
+                        >
+                          {post.category}
+                        </span>
                         <h4
                           style={{
-                            fontSize: 13.5,
-                            fontWeight: 600,
+                            fontSize: 14,
+                            fontWeight: 700,
                             lineHeight: 1.35,
-                            color: "var(--ink)",
+                            color: "var(--canopy-deep)",
                             margin: 0,
+                            display: "-webkit-box",
+                            WebkitLineClamp: 2,
+                            WebkitBoxOrient: "vertical",
+                            overflow: "hidden",
+                            transition: "color .2s ease",
                           }}
-                          className="recent-post-link"
+                          className="recent-post-title"
                         >
                           {post.title}
                         </h4>
-                        <span style={{ fontSize: 11.5, color: "var(--ink-soft)", marginTop: 4, display: "block" }}>
-                          {post.date}
-                        </span>
+                        <div
+                          style={{
+                            display: "flex",
+                            alignItems: "center",
+                            gap: 8,
+                            fontSize: 11.5,
+                            color: "var(--ink-soft)",
+                            marginTop: 5,
+                          }}
+                        >
+                          <span>{post.date}</span>
+                          <span>•</span>
+                          <span>{post.readTime}</span>
+                        </div>
                       </div>
                     </div>
                   ))}
@@ -752,17 +904,43 @@ export default function News() {
               {/* Widget 3: Categories with Count */}
               <div
                 style={{
-                  background: "#fff",
-                  borderRadius: 14,
-                  padding: "24px",
-                  border: "1px solid var(--paper-dim)",
-                  boxShadow: "0 2px 10px rgba(0,0,0,0.02)",
+                  background: "#ffffff",
+                  borderRadius: 18,
+                  padding: "28px 24px",
+                  border: "1px solid rgba(17, 36, 17, 0.08)",
+                  boxShadow: "0 10px 30px -10px rgba(11, 50, 11, 0.06)",
                 }}
               >
-                <h3 style={{ fontSize: 15, fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.05em", color: "var(--canopy)", marginBottom: 14 }}>
-                  Categories
-                </h3>
-                <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 18, paddingBottom: 12, borderBottom: "1px solid rgba(17, 36, 17, 0.06)" }}>
+                  <div
+                    style={{
+                      width: 28,
+                      height: 28,
+                      borderRadius: 8,
+                      background: "rgba(217, 154, 63, 0.14)",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      color: "var(--marigold-deep)",
+                    }}
+                  >
+                    <FolderOpen size={15} />
+                  </div>
+                  <h3
+                    style={{
+                      fontSize: 14,
+                      fontWeight: 700,
+                      textTransform: "uppercase",
+                      letterSpacing: "0.08em",
+                      color: "var(--canopy-deep)",
+                      margin: 0,
+                    }}
+                  >
+                    Topics & Themes
+                  </h3>
+                </div>
+
+                <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
                   {NEWS_CATEGORIES.map((cat) => {
                     const isSelected = activeCategory === cat;
                     return (
@@ -772,20 +950,22 @@ export default function News() {
                           setSelectedPostId(null);
                           setActiveCategory(cat);
                         }}
+                        className="category-sidebar-btn"
                         style={{
                           display: "flex",
                           alignItems: "center",
                           justifyContent: "space-between",
-                          padding: "8px 12px",
-                          borderRadius: 6,
-                          background: isSelected ? "var(--canopy)" : "var(--paper)",
-                          color: isSelected ? "#fff" : "var(--ink)",
-                          border: "none",
+                          padding: "10px 14px",
+                          borderRadius: 8,
+                          background: isSelected ? "var(--canopy)" : "transparent",
+                          color: isSelected ? "#ffffff" : "var(--ink)",
+                          border: isSelected ? "1px solid var(--canopy-deep)" : "1px solid transparent",
                           cursor: "pointer",
-                          fontSize: 13,
-                          fontWeight: isSelected ? 600 : 500,
+                          fontSize: 13.5,
+                          fontWeight: isSelected ? 700 : 500,
                           textAlign: "left",
-                          transition: "all .15s ease",
+                          transition: "all .18s ease",
+                          borderLeft: isSelected ? "3.5px solid var(--marigold)" : "3.5px solid transparent",
                         }}
                       >
                         <span>{cat}</span>
@@ -793,10 +973,10 @@ export default function News() {
                           style={{
                             fontSize: 11.5,
                             fontWeight: 700,
-                            padding: "2px 7px",
+                            padding: "2px 8px",
                             borderRadius: 999,
-                            background: isSelected ? "rgba(255,255,255,0.25)" : "var(--paper-dim)",
-                            color: isSelected ? "#fff" : "var(--ink-soft)",
+                            background: isSelected ? "rgba(255,255,255,0.24)" : "var(--paper-dim)",
+                            color: isSelected ? "#ffffff" : "var(--ink-soft)",
                           }}
                         >
                           {categoryCounts[cat] || 0}
@@ -807,23 +987,49 @@ export default function News() {
                 </div>
               </div>
 
-              {/* Widget 4: Official Publications & Reports */}
+              {/* Widget 4: Official Case Studies & Archival Publications */}
               <div
                 style={{
-                  background: "var(--canopy-deep)",
-                  borderRadius: 14,
-                  padding: "24px",
-                  color: "#fff",
+                  background: "linear-gradient(145deg, #0d3816 0%, #061c0b 100%)",
+                  borderRadius: 18,
+                  padding: "28px 24px",
+                  color: "#ffffff",
+                  boxShadow: "0 14px 36px -10px rgba(3, 14, 5, 0.45)",
+                  border: "1px solid rgba(217, 154, 63, 0.3)",
                 }}
               >
-                <h3 style={{ fontSize: 14.5, fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.06em", color: "var(--marigold)", marginBottom: 14 }}>
-                  Official Reports
+                <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 12 }}>
+                  <Sparkles size={16} color="var(--marigold)" />
+                  <span
+                    style={{
+                      fontSize: 11,
+                      fontWeight: 700,
+                      textTransform: "uppercase",
+                      letterSpacing: "0.1em",
+                      color: "var(--marigold)",
+                    }}
+                  >
+                    Verified Documentation
+                  </span>
+                </div>
+                <h3
+                  style={{
+                    fontFamily: "var(--font-serif)",
+                    fontSize: 20,
+                    fontWeight: 700,
+                    color: "#ffffff",
+                    margin: "0 0 10px",
+                    lineHeight: 1.3,
+                  }}
+                >
+                  Official Archival Reports & Case Studies
                 </h3>
-                <p style={{ fontSize: 12.5, color: "rgba(246,244,236,0.8)", marginBottom: 16, lineHeight: 1.5 }}>
-                  Download certified survey maps, legislation, and UNDP case studies on the Ekuri model.
+                <p style={{ fontSize: 13, color: "rgba(246,244,236,0.85)", marginBottom: 18, lineHeight: 1.55 }}>
+                  Access the official 1999 Pan-African Ford Foundation Photo Album, UNDP Equator case studies, and boundary survey plans.
                 </p>
-                <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-                  {downloadablePublications.map((pub, idx) => (
+
+                <div style={{ display: "flex", flexDirection: "column", gap: 10, marginBottom: 18 }}>
+                  {downloadablePublications.slice(0, 3).map((pub, idx) => (
                     <a
                       key={idx}
                       href={pub.file}
@@ -832,53 +1038,153 @@ export default function News() {
                       style={{
                         display: "flex",
                         alignItems: "center",
-                        gap: 8,
-                        padding: "8px 12px",
-                        borderRadius: 6,
+                        justifyContent: "space-between",
+                        padding: "10px 14px",
+                        borderRadius: 8,
                         background: "rgba(255,255,255,0.08)",
-                        color: "#fff",
+                        color: "#ffffff",
                         textDecoration: "none",
                         fontSize: 12.5,
-                        fontWeight: 500,
+                        fontWeight: 600,
+                        border: "1px solid rgba(255,255,255,0.12)",
+                        transition: "all .2s ease",
                       }}
+                      className="pub-download-card"
                     >
-                      <FileText size={14} color="var(--marigold)" style={{ flexShrink: 0 }} />
-                      <span style={{ whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
-                        {pub.title}
-                      </span>
+                      <div style={{ display: "flex", alignItems: "center", gap: 8, minWidth: 0, paddingRight: 8 }}>
+                        <FileText size={15} color="var(--marigold)" style={{ flexShrink: 0 }} />
+                        <span style={{ whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
+                          {pub.title}
+                        </span>
+                      </div>
+                      <Download size={14} color="rgba(255,255,255,0.7)" style={{ flexShrink: 0 }} />
                     </a>
                   ))}
                 </div>
+
                 <Link
                   to="/publications"
                   style={{
                     display: "inline-flex",
                     alignItems: "center",
-                    gap: 6,
-                    color: "var(--marigold)",
-                    fontSize: 12.5,
+                    gap: 8,
+                    color: "var(--canopy-deep)",
+                    background: "var(--marigold)",
+                    padding: "10px 20px",
+                    borderRadius: 999,
+                    fontSize: 13,
                     fontWeight: 700,
                     textDecoration: "none",
-                    marginTop: 16,
+                    width: "100%",
+                    justifyContent: "center",
+                    boxShadow: "0 4px 14px rgba(217, 154, 63, 0.3)",
                   }}
                 >
-                  View All Publications <ArrowRight size={13} />
+                  <span>Browse All Publications</span>
+                  <ArrowRight size={14} />
                 </Link>
               </div>
 
-              {/* Widget 5: Tags Cloud */}
+              {/* Widget 5: Rainforest Guardian Support Action Card */}
               <div
                 style={{
-                  background: "#fff",
-                  borderRadius: 14,
+                  background: "rgba(224, 159, 62, 0.08)",
+                  borderRadius: 18,
                   padding: "24px",
-                  border: "1px solid var(--paper-dim)",
-                  boxShadow: "0 2px 10px rgba(0,0,0,0.02)",
+                  border: "1.5px dashed rgba(217, 154, 63, 0.4)",
+                  textAlign: "center",
                 }}
               >
-                <h3 style={{ fontSize: 15, fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.05em", color: "var(--canopy)", marginBottom: 14 }}>
-                  Popular Tags
-                </h3>
+                <div
+                  style={{
+                    width: 44,
+                    height: 44,
+                    borderRadius: "50%",
+                    background: "var(--marigold)",
+                    color: "var(--canopy-deep)",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    margin: "0 auto 12px",
+                  }}
+                >
+                  <HeartHandshake size={22} />
+                </div>
+                <h4
+                  style={{
+                    fontFamily: "var(--font-serif)",
+                    fontSize: 17,
+                    fontWeight: 700,
+                    color: "var(--canopy-deep)",
+                    margin: "0 0 8px",
+                  }}
+                >
+                  Protect 33,600 Hectares
+                </h4>
+                <p style={{ fontSize: 13, color: "var(--ink-soft)", lineHeight: 1.5, margin: "0 0 16px" }}>
+                  Support local ranger patrols, community agroforestry, and ongoing rainforest defense.
+                </p>
+                <Link
+                  to="/donate"
+                  style={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    gap: 6,
+                    padding: "9px 20px",
+                    borderRadius: 999,
+                    background: "var(--canopy)",
+                    color: "#ffffff",
+                    fontSize: 13,
+                    fontWeight: 700,
+                    textDecoration: "none",
+                    boxShadow: "0 4px 12px rgba(11,50,11,0.2)",
+                  }}
+                >
+                  <span>Support The Initiative</span>
+                  <ArrowRight size={14} />
+                </Link>
+              </div>
+
+              {/* Widget 6: Tags Cloud */}
+              <div
+                style={{
+                  background: "#ffffff",
+                  borderRadius: 18,
+                  padding: "26px 24px",
+                  border: "1px solid rgba(17, 36, 17, 0.08)",
+                  boxShadow: "0 10px 30px -10px rgba(11, 50, 11, 0.06)",
+                }}
+              >
+                <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 16, paddingBottom: 10, borderBottom: "1px solid rgba(17, 36, 17, 0.06)" }}>
+                  <div
+                    style={{
+                      width: 28,
+                      height: 28,
+                      borderRadius: 8,
+                      background: "rgba(217, 154, 63, 0.14)",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      color: "var(--marigold-deep)",
+                    }}
+                  >
+                    <Tag size={15} />
+                  </div>
+                  <h3
+                    style={{
+                      fontSize: 14,
+                      fontWeight: 700,
+                      textTransform: "uppercase",
+                      letterSpacing: "0.08em",
+                      color: "var(--canopy-deep)",
+                      margin: 0,
+                    }}
+                  >
+                    Popular Tags
+                  </h3>
+                </div>
+
                 <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
                   {allTags.map((tag) => (
                     <button
@@ -887,15 +1193,17 @@ export default function News() {
                         setSelectedPostId(null);
                         setSearchQuery(tag);
                       }}
+                      className="blog-tag-pill"
                       style={{
-                        padding: "5px 12px",
+                        padding: "6px 14px",
                         borderRadius: 999,
                         background: "var(--paper)",
-                        border: "1px solid var(--paper-dim)",
+                        border: "1px solid rgba(17, 36, 17, 0.1)",
                         fontSize: 12,
-                        fontWeight: 500,
+                        fontWeight: 600,
                         color: "var(--ink)",
                         cursor: "pointer",
+                        transition: "all .18s ease",
                       }}
                     >
                       #{tag}
@@ -909,15 +1217,50 @@ export default function News() {
       </div>
 
       <style>{`
-        @media (min-width: 960px) {
+        @media (min-width: 1040px) {
           .blog-layout-grid {
-            grid-template-columns: 2.3fr 1fr !important;
+            grid-template-columns: minmax(0, 1fr) 380px !important;
+            gap: 48px !important;
+            align-items: start !important;
+          }
+          .blog-sidebar-sticky {
+            position: sticky;
+            top: 96px;
           }
         }
-        .blog-title-link:hover {
+        @media (min-width: 1280px) {
+          .blog-layout-grid {
+            grid-template-columns: minmax(0, 1fr) 400px !important;
+            gap: 56px !important;
+          }
+        }
+        .blog-search-input:focus {
+          border-color: var(--marigold) !important;
+          box-shadow: 0 0 0 3px rgba(217, 154, 63, 0.18) !important;
+          background: #ffffff !important;
+        }
+        .recent-post-card:hover .recent-thumb-img {
+          transform: scale(1.08);
+        }
+        .recent-post-card:hover .recent-post-title {
           color: var(--marigold-deep) !important;
         }
-        .recent-post-link:hover {
+        .category-sidebar-btn:hover {
+          background: rgba(11, 50, 11, 0.05);
+          transform: translateX(4px);
+        }
+        .pub-download-card:hover {
+          background: rgba(255, 255, 255, 0.14) !important;
+          border-color: var(--marigold) !important;
+        }
+        .blog-tag-pill:hover {
+          background: var(--canopy) !important;
+          color: #ffffff !important;
+          border-color: var(--canopy) !important;
+          transform: translateY(-2px);
+          box-shadow: 0 4px 10px rgba(11,50,11,0.15);
+        }
+        .blog-title-link:hover {
           color: var(--marigold-deep) !important;
         }
         .blog-thumb-img:hover {

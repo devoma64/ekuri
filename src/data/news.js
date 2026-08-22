@@ -48,7 +48,7 @@ export const NEWS_POSTS = [
       role: "Global Secretariat",
       avatar: "/assets/img/ekuri-logo-circle.png",
     },
-    image: null,
+    image: "/assets/img/archive/obudu-1999-chief-esira-chief-orji.jpg",
     excerpt:
       "Recognized on the global stage at Kuala Lumpur for extraordinary achievement in community-based biodiversity conservation and poverty reduction in Sub-Saharan Africa.",
     content: [
@@ -100,7 +100,7 @@ export const NEWS_POSTS = [
       role: "Head of Forest Protection",
       avatar: "/assets/img/ekuri-logo-circle.png",
     },
-    image: null,
+    image: "/assets/img/archive/road-bridge-1990s-04.jpg",
     excerpt:
       "Deep inside the Oban buffer zone, locally trained community rangers patrol hundreds of kilometers of perimeter to safeguard against illegal logging, poaching, and encroachment.",
     content: [
@@ -152,7 +152,7 @@ export const NEWS_POSTS = [
       role: "Historical Documentation",
       avatar: "/assets/img/ekuri-logo-circle.png",
     },
-    image: null,
+    image: "/assets/img/archive/road-bridge-1990s-03.jpg",
     excerpt:
       "In 1982, when a commercial logging company offered to build a road in exchange for clear-cutting timber, the Ekuri elders said no — choosing to construct a 40km road themselves.",
     content: [

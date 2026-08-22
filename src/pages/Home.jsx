@@ -168,8 +168,8 @@ export default function Home() {
             }}
           >
             <img
-              src="/assets/img/ekuri-forest-work.jpg"
-              alt="Ekuri community members actively stewarding the pristine rainforest"
+              src="/assets/img/archive/road-bridge-1990s-04.jpg"
+              alt="Ekuri community members actively stewarding the pristine rainforest and building communal infrastructure"
               style={{
                 width: "100%",
                 height: "auto",
@@ -684,31 +684,31 @@ export default function Home() {
             {[
               {
                 num: "01",
-                category: "PRIMARY CANOPY",
-                title: "Ancient Rainforest Canopy",
-                location: "Central Forest Reserve, Old Ekuri",
-                src: "/assets/img/hero-bg.jpg",
+                category: "HISTORICAL ARCHIVE · 1999",
+                title: "Pan-African Community Forestry Assembly",
+                location: "Obudu Cattle Ranch & Old Ekuri",
+                src: "/assets/img/archive/obudu-1999-opening-lodge.jpg",
               },
               {
                 num: "02",
-                category: "CARTOGRAPHY",
-                title: "Superhighway Threat & Defense Map",
-                location: "Cross River State Protected Corridor",
-                src: "/assets/img/superhighway-map.jpg",
+                category: "SELF-RELIANCE · 1990s",
+                title: "Communal Road & River Timber Bridge",
+                location: "Ekuri Rainforest Corridor",
+                src: "/assets/img/archive/road-bridge-1990s-04.jpg",
               },
               {
                 num: "03",
-                category: "BIODIVERSITY",
-                title: "Rainforest Flora & Understory",
-                location: "Ecological Sanctuary & Watershed",
-                src: "/assets/img/ekuri-rainforest-flora.jpg",
+                category: "DIPLOMACY · 2017",
+                title: "US Embassy Delegation & Traditional Chiefs",
+                location: "Old and New Ekuri Communities",
+                src: "/assets/img/archive/us-embassy-2017-09.jpg",
               },
               {
                 num: "04",
-                category: "AGROFORESTRY",
-                title: "Community Farmland Buffer Zone",
-                location: "Sustainable Agriculture Perimeter",
-                src: "/assets/img/ekuri-agroforestry-farming.jpg",
+                category: "PRIMARY CANOPY",
+                title: "33,600 Hectares of Pristine Rainforest",
+                location: "Central Forest Reserve & Buffer Corridor",
+                src: "/assets/img/hero-bg.jpg",
               },
             ].map((photo, idx) => (
               <Reveal key={photo.title} delay={idx * 70}>

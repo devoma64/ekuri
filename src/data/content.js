@@ -105,6 +105,25 @@ export const CONTACT = {
   location: "Ekuri Clan, Akamkpa Local Government Area, Cross River State, Nigeria",
 };
 
+export const HISTORICAL_LEADERS = [
+  {
+    name: "Chief Otey Esira",
+    village: "Village Head of New Ekuri",
+    title: "Visionary Pioneer of Self-Reliance",
+    copy: "In 1982, Chief Esira famously vetoed a logging company's deal to exchange forest exploitation for road construction. He rallied the community to fund and construct their own 40km road and timber bridges using levies on non-timber forest products, establishing the foundational principle of Ekuri's perpetual forest preservation.",
+    image: "/assets/img/archive/obudu-1999-chief-esira-chief-orji.jpg",
+    era: "1982–1999",
+  },
+  {
+    name: "Chief Orji",
+    village: "Village Head of Old Ekuri",
+    title: "Co-Founding Traditional Custodian",
+    copy: "Chief Orji co-led the democratic mobilization of Old Ekuri, uniting the two sister communities to build communal infrastructure, establish customary forest surveillance, and co-host the landmark 1999 Pan-African Community Forestry Conference with the Ford Foundation.",
+    image: "/assets/img/archive/obudu-1999-chief-esira-chief-orji.jpg",
+    era: "1982–1999",
+  },
+];
+
 export const TIMELINE = [
   {
     year: "1982",
@@ -114,9 +133,11 @@ export const TIMELINE = [
   },
   {
     year: "1986–1997",
-    title: "A 40km road, self-funded",
-    copy: "Levies on the sale of non-timber forest products, collected from every member of Old and New Ekuri, funded construction of a 40km road. It reached Old Ekuri in 1990 and New Ekuri in 1997 paid for entirely by the community, without mortgaging the forest.",
-    source: "UNDP Equator Initiative Case Study, 2004",
+    title: "A 40km road & river timber bridges, self-funded",
+    copy: "Levies on the sale of non-timber forest products, collected from every member of Old and New Ekuri, funded construction of a 40km road and heavy timber river bridges through the rainforest. The road reached Old Ekuri in 1990 and New Ekuri in 1997 — paid for entirely by the community with communal labor, without mortgaging a single tree.",
+    source: "UNDP Equator Initiative Case Study, 2004; Ekuri Archival Records",
+    image: "/assets/img/archive/road-bridge-1990s-04.jpg",
+    imageCaption: "Ekuri villagers manually clearing road paths and constructing river timber bridges in the 1990s.",
   },
   {
     year: "1989",
@@ -137,9 +158,17 @@ export const TIMELINE = [
     source: "UNDP Equator Initiative Case Study, 2004",
   },
   {
+    year: "1999",
+    title: "Pan-African Conference: 'Conservation by Communities' at Obudu",
+    copy: "Ekuri co-convened the landmark conference 'Community Forestry Management in Sub-Saharan Africa' at Obudu Cattle Ranch with funding from the Ford Foundation. African delegates from Uganda (Mt. Elgon), Mozambique (Tanga FMC), and Nigerian policy makers conducted practical field studies in Old Ekuri on forest inventory, mapping, and NTFPs led by Chief Esira and Chief Orji.",
+    source: "Ford Foundation West Africa Proceedings & Archival Photo Album, March 1999",
+    image: "/assets/img/archive/obudu-1999-chief-esira-chief-orji.jpg",
+    imageCaption: "Chief Esira of New Ekuri and Chief Orji of Old Ekuri presiding at the 1999 Obudu Pan-African Conference.",
+  },
+  {
     year: "2004",
-    title: "UNDP Equator Prize",
-    copy: "The Ekuri Initiative won the Equator Prize in Kuala Lumpur, Malaysia, recognized by the UNDP Equator Initiative for outstanding community-based conservation.",
+    title: "UNDP Equator Prize Recognition",
+    copy: "The Ekuri Initiative won the Equator Prize in Kuala Lumpur, Malaysia, recognized by the UNDP Equator Initiative for outstanding community-based conservation and poverty reduction through tropical rainforest preservation.",
     source: "UNDP Equator Initiative Case Study, 2004",
   },
   {
@@ -147,6 +176,16 @@ export const TIMELINE = [
     title: "Defending the forest from the Cross River Superhighway",
     copy: "A proposed Superhighway route was set to cut directly through the Ekuri Community forest and Cross River National Park. WWF-UK wrote to President Muhammadu Buhari in October 2015 urging the route be redrawn. In February 2016, the Ekuri Traditional Rulers Council wrote formally to the Governor of Cross River State opposing the revocation of their rights of occupancy and withdrawing their support for the project. International conservation organizations rallied behind the community's position.",
     source: "WWF-UK letter to President Buhari, 27 Oct 2015; Ekuri Traditional Rulers Council letter, 7 Feb 2016",
+    image: "/assets/img/superhighway-map.jpg",
+    imageCaption: "WCS defense map illustrating the superhighway alignment averted by community mobilization.",
+  },
+  {
+    year: "2017",
+    title: "US Embassy Delegation Visit to Old & New Ekuri",
+    copy: "On April 23, 2017, senior diplomats and officials from the United States Embassy conducted an official high-level visit to both Old and New Ekuri communities to witness grassroots community forest management firsthand, engage with traditional councils, and reinforce international solidarity for indigenous conservation.",
+    source: "Ekuri Archival Photographic Record, 23 April 2017",
+    image: "/assets/img/archive/us-embassy-2017-09.jpg",
+    imageCaption: "US Embassy delegation in commemorative gathering with traditional chiefs and women of Ekuri (April 23, 2017).",
   },
 ];
 
@@ -163,6 +202,7 @@ export const FOUNDER_QUOTE = {
 
 export const GALLERY_FILTERS = [
   "All",
+  "Historical Archive",
   "Community Meetings",
   "Forest & Wildlife",
   "Agroforestry & Livelihoods",
@@ -170,18 +210,173 @@ export const GALLERY_FILTERS = [
 ];
 
 export const GALLERY_ITEMS = [
+  // --- HISTORICAL ARCHIVE: ROAD & TIMBER BRIDGES (1990s) ---
+  {
+    id: 101,
+    title: "Communal Road Construction Through the Rainforest",
+    category: "Historical Archive",
+    year: "c. 1990s",
+    src: "/assets/img/archive/road-bridge-1990s-04.jpg",
+    description: "Ekuri community members clearing and excavating the 40km road corridor through red clay soil using hand tools, hoes, and shovels — funded entirely by communal levies without conceding logging rights.",
+    location: "Ekuri Rainforest Corridor",
+  },
+  {
+    id: 102,
+    title: "Heavy Timber River Bridge Under Construction",
+    category: "Historical Archive",
+    year: "c. 1990s",
+    src: "/assets/img/archive/road-bridge-1990s-03.jpg",
+    description: "Hand-crafted heavy timber bridge built across the rainforest river to connect Old and New Ekuri to regional markets without reliance on commercial loggers.",
+    location: "Ekuri River Crossing",
+  },
+  {
+    id: 103,
+    title: "First Vehicular Transit on Completed Ekuri Bridge",
+    category: "Historical Archive",
+    year: "c. 1990s",
+    src: "/assets/img/archive/road-bridge-1990s-05.jpg",
+    description: "Pickup vehicles and community transport crossing the newly finished bridge, establishing independent market access for non-timber forest products.",
+    location: "Ekuri River Bridge",
+  },
+  {
+    id: 104,
+    title: "Bridgehead Inspection & Community Gathering",
+    category: "Historical Archive",
+    year: "c. 1990s",
+    src: "/assets/img/archive/road-bridge-1990s-06.jpg",
+    description: "Elders, youths, and community engineers inspecting bridge guard rails following completion of the self-reliance infrastructure drive.",
+    location: "Ekuri Bridgehead",
+  },
+
+  // --- HISTORICAL ARCHIVE: 1999 OBUDU PAN-AFRICAN CONFERENCE ---
+  {
+    id: 105,
+    title: "Chief Esira (New Ekuri) & Chief Orji (Old Ekuri)",
+    category: "Historical Archive",
+    year: "March 1999",
+    src: "/assets/img/archive/obudu-1999-chief-esira-chief-orji.jpg",
+    description: "Chief Esira of New Ekuri (left) and Chief Orji of Old Ekuri (right), the traditional rulers whose vision and refusal to sell out the forest founded the Ekuri conservation model.",
+    location: "Obudu Cattle Ranch, Cross River State",
+  },
+  {
+    id: 106,
+    title: "Pan-African Conference Opening at Kizito Attah Lodge",
+    category: "Historical Archive",
+    year: "March 5, 1999",
+    src: "/assets/img/archive/obudu-1999-opening-lodge.jpg",
+    description: "Delegates from across Sub-Saharan Africa, Nigerian policymakers, and Ford Foundation officers gathered for 'Conservation by Communities: Community Forestry Management in Sub-Saharan Africa'.",
+    location: "Kizito Attah Lodge, Obudu",
+  },
+  {
+    id: 107,
+    title: "Field Study & Forest Inventory in Old Ekuri",
+    category: "Historical Archive",
+    year: "March 8, 1999",
+    src: "/assets/img/archive/obudu-1999-field-visit-ekuri.jpg",
+    description: "International conference delegates on a one-day field study in Old Ekuri learning practical stock-survey techniques, non-timber forest products (NTFP) harvesting, and medicinal plant cataloging.",
+    location: "Old Ekuri Primary Forest",
+  },
+  {
+    id: 108,
+    title: "Traditional Cultural Performers with Sculpted Headdresses",
+    category: "Historical Archive",
+    year: "March 1999",
+    src: "/assets/img/archive/obudu-1999-traditional-dancers.jpg",
+    description: "Old and New Ekuri women performing traditional dances wearing celebrated hand-carved sculptural headdresses and indigenous textiles during the Pan-African reception.",
+    location: "Ekuri Cultural Assembly",
+  },
+  {
+    id: 109,
+    title: "Delegation Departure via Light Aircraft 5N-ARP",
+    category: "Historical Archive",
+    year: "March 10, 1999",
+    src: "/assets/img/archive/obudu-1999-airstrip-delegation.jpg",
+    description: "International participants from Uganda, Mozambique, and partner institutions preparing to board flight 5N-ARP at the Obudu airstrip after concluding conference proceedings.",
+    location: "Obudu Airstrip",
+  },
+  {
+    id: 110,
+    title: "Ford Foundation Commemorative Photo Album Cover",
+    category: "Historical Archive",
+    year: "March 1999",
+    src: "/assets/img/archive/obudu-1999-album-01.jpg",
+    description: "Cover plate of the original published photo album 'Conservation by Communities: Community Forestry Management in Sub-Saharan Africa', March 5–9, 1999.",
+    location: "Ford Foundation West Africa Archive",
+  },
+
+  // --- HISTORICAL ARCHIVE: 2017 US EMBASSY OFFICIAL VISIT ---
+  {
+    id: 111,
+    title: "US Embassy Delegation & Ekuri Traditional Council",
+    category: "Historical Archive",
+    year: "April 23, 2017",
+    src: "/assets/img/archive/us-embassy-2017-09.jpg",
+    description: "High-level commemorative assembly of US Embassy diplomats and staff with traditional chiefs, elders, women leaders, and youths of Old and New Ekuri.",
+    location: "Old & New Ekuri Communities",
+  },
+  {
+    id: 112,
+    title: "US Embassy Envoy Addressing the Community Gathering",
+    category: "Historical Archive",
+    year: "April 23, 2017",
+    src: "/assets/img/archive/us-embassy-2017-05.jpg",
+    description: "US diplomatic envoy speaking to the assembled community members under the pavilion, affirming international support for community land rights and rainforest conservation.",
+    location: "Ekuri Assembly Ground",
+  },
+  {
+    id: 113,
+    title: "Community Dialogue on Rainforest Defense",
+    category: "Historical Archive",
+    year: "April 23, 2017",
+    src: "/assets/img/archive/us-embassy-2017-06.jpg",
+    description: "Ekuri Initiative leaders briefing the US Embassy delegation on the successful campaign defending the pristine forest corridor against destructive infrastructure threats.",
+    location: "Ekuri Reception Pavilion",
+  },
+  {
+    id: 114,
+    title: "Diplomatic Tour of New Ekuri Village",
+    category: "Historical Archive",
+    year: "April 23, 2017",
+    src: "/assets/img/archive/us-embassy-2017-01.jpg",
+    description: "US Embassy representatives walking through the community landscape during their on-site inspection of indigenous conservation achievements.",
+    location: "New Ekuri Village",
+  },
+
+  // --- HISTORICAL ARCHIVE: CEREMONIAL HONORS & INTERNATIONAL RECEPTION ---
+  {
+    id: 115,
+    title: "Conferment of Traditional Ekuri Regalia & Honors",
+    category: "Historical Archive",
+    year: "c. 1990s",
+    src: "/assets/img/archive/ceremony-1990s-04.jpg",
+    description: "Visiting international conservation advisors received as honored guests of the Ekuri Clan, vested in traditional woven wrappers, ceremonial sashes, and staff.",
+    location: "Ekuri Ceremonial Grounds",
+  },
+  {
+    id: 116,
+    title: "Presentation of Cultural Gifts by Village Elders",
+    category: "Historical Archive",
+    year: "c. 1990s",
+    src: "/assets/img/archive/ceremony-1990s-06.jpg",
+    description: "Ekuri elders presenting hand-crafted gifts and textiles to international partners celebrating communal solidarity and long-term partnership.",
+    location: "Ekuri Village Reception",
+  },
+
+  // --- LIVING FOREST, BIODIVERSITY & CARTOGRAPHY ---
   {
     id: 5,
     title: "Ekuri General Assembly & Democratic Governance",
     category: "Community Meetings",
-    src: null,
-    description: "Democratic assembly of Old and New Ekuri villagers deciding on collective forest management, revenue sharing, and community development.",
-    location: "Ekuri Village Assembly",
+    year: "Authentic Record",
+    src: "/assets/img/archive/us-embassy-2017-07.jpg",
+    description: "General community assembly of Old and New Ekuri villagers, traditional councils, and women leaders gathered under the pavilion to deliberate on collective rainforest stewardship and communal development.",
+    location: "Ekuri Community Assembly",
   },
   {
     id: 6,
     title: "Sustainable Agroforestry & Farmland",
     category: "Agroforestry & Livelihoods",
+    year: "Living Archive",
     src: "/assets/img/ekuri-agroforestry-farming.jpg",
     description: "Traditional agroforestry plots buffering the forest boundary, integrating sustainable cash crops with conservation principles.",
     location: "Agricultural Buffer Zone",
@@ -190,6 +385,7 @@ export const GALLERY_ITEMS = [
     id: 7,
     title: "Rainforest Flora & Understory Biodiversity",
     category: "Forest & Wildlife",
+    year: "Living Archive",
     src: "/assets/img/ekuri-rainforest-flora.jpg",
     description: "Vibrant tropical understory and wild flora thriving inside the protected primary rainforest ecosystem.",
     location: "Ekuri Rainforest",
@@ -198,6 +394,7 @@ export const GALLERY_ITEMS = [
     id: 8,
     title: "Wildlife of the Ekuri Forest & National Park Corridor",
     category: "Forest & Wildlife",
+    year: "Living Archive",
     src: "/assets/img/wild-life.jpeg",
     description: "Rich biodiversity and wildlife preserved within the contiguous Cross River National Park corridor.",
     location: "Biodiversity Sanctuary",
@@ -206,6 +403,7 @@ export const GALLERY_ITEMS = [
     id: 9,
     title: "Pristine Rainforest Canopy",
     category: "Forest & Wildlife",
+    year: "Living Archive",
     src: "/assets/img/hero-bg.jpg",
     description: "Morning sunbeams breaking through the ancient canopy of the largest community-managed rainforest in West Africa.",
     location: "Canopy View",
@@ -214,14 +412,16 @@ export const GALLERY_ITEMS = [
     id: 10,
     title: "UNDP Equator Prize Recognition",
     category: "Milestones & Maps",
+    year: "2004",
     src: null,
-    description: "International acclaim and recognition for community-driven biodiversity conservation and poverty reduction.",
+    description: "International acclaim and recognition conferred in Kuala Lumpur for community-driven biodiversity conservation and poverty reduction.",
     location: "International Award",
   },
   {
     id: 11,
     title: "Certified Perimeter Survey Plan",
     category: "Milestones & Maps",
+    year: "Certified Cadastral",
     src: "/assets/img/ekuri-perimeter-survey.jpg",
     description: "The official certified boundary survey providing legal recognition for the 33,600-hectare Ekuri Community Forest.",
     location: "Cadastral Record",
@@ -230,9 +430,11 @@ export const GALLERY_ITEMS = [
     id: 12,
     title: "Superhighway Route Defense Map",
     category: "Milestones & Maps",
+    year: "2016",
     src: "/assets/img/superhighway-map.jpg",
     description: "Cartographic defense showing the proposed 260km superhighway and the community campaign that successfully protected the forest.",
     location: "Advocacy Campaign",
   },
 ];
+
 

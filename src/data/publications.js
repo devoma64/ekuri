@@ -39,12 +39,13 @@ export const PUBLICATIONS = [
     copy: "UNDP's official case study documenting the Ekuri Initiative's history, activities, and impact published on the occasion of the Ekuri Initiative winning the Equator Prize.",
   },
   {
-    title: "Proceedings on Conservation by Communities: Community Forestry Management in Sub-Saharan Africa",
-    citation: "The Ford Foundation West Africa. 1999. Proceedings on Conservation by Communities: Community Forestry Management in sub-Saharan Africa, hosted by Ekuri at Obudu Cattle Ranch, Cross River State, Nigeria, on March 5–9, 1999. With funding from the Ford Foundation.",
-    source: "The Ford Foundation West Africa, hosted by Ekuri at Obudu Cattle Ranch, Cross River State",
+    title: "Proceedings & Archival Photo Album: Conservation by Communities — Community Forestry Management in Sub-Saharan Africa",
+    citation: "The Ford Foundation West Africa. 1999. Proceedings and Commemorative Photo Album on Conservation by Communities: Community Forestry Management in sub-Saharan Africa, hosted by Ekuri at Obudu Cattle Ranch, Cross River State, Nigeria, March 5–9, 1999.",
+    source: "The Ford Foundation West Africa & Ekuri Initiative, Obudu Cattle Ranch",
     year: 1999,
-    type: "unavailable",
-    copy: "Proceedings from the March 5–9, 1999 conference on community forestry management, convened by the Ekuri Initiative with Ford Foundation funding and drawing participants from across Sub-Saharan Africa.",
+    type: "pdf",
+    file: "/assets/docs/1999_Conservation_by_Communities_Photo_Album.pdf",
+    copy: "Original archival photo album and proceedings from the landmark March 5–9, 1999 Pan-African conference on community forestry management, convened with Ford Foundation support at Obudu Cattle Ranch and featuring practical field study sessions at Old and New Ekuri.",
   },
   {
     title: "Climate Solutions from Community Forests: Learning from Indigenous Peoples and Local Communities",

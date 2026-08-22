@@ -173,17 +173,18 @@ export default function Gallery() {
                                 position: "absolute",
                                 top: 12,
                                 left: 12,
-                                padding: "3px 10px",
-                                background: "rgba(3, 14, 5, 0.75)",
+                                padding: "4px 10px",
+                                background: g.category === "Historical Archive" ? "rgba(11, 36, 15, 0.88)" : "rgba(3, 14, 5, 0.78)",
                                 backdropFilter: "blur(6px)",
-                                color: "var(--marigold)",
+                                color: g.category === "Historical Archive" ? "var(--marigold)" : "#ffffff",
                                 fontSize: 10.5,
                                 fontWeight: 700,
                                 letterSpacing: "0.08em",
                                 textTransform: "uppercase",
+                                border: g.category === "Historical Archive" ? "1px solid rgba(217, 154, 63, 0.4)" : "none",
                               }}
                             >
-                              {String(idx + 1).padStart(2, "0")} · {g.category}
+                              {g.year ? `${g.year} · ` : ""}{g.category}
                             </div>
 
                             {/* Hover Overlay with Zoom Icon */}
@@ -367,7 +368,7 @@ export default function Gallery() {
                   background: "var(--paper)",
                 }}
               >
-                <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 12, flexWrap: "wrap" }}>
                   <span
                     style={{
                       background: "var(--canopy)",
@@ -382,6 +383,21 @@ export default function Gallery() {
                   >
                     {activePhoto.category}
                   </span>
+                  {activePhoto.year && (
+                    <span
+                      style={{
+                        background: "rgba(217, 154, 63, 0.15)",
+                        color: "var(--marigold-deep)",
+                        fontSize: 11.5,
+                        fontWeight: 700,
+                        padding: "4px 10px",
+                        borderRadius: 999,
+                        border: "1px solid rgba(217, 154, 63, 0.3)",
+                      }}
+                    >
+                      {activePhoto.year}
+                    </span>
+                  )}
                   <span style={{ fontSize: 13, fontWeight: 600, color: "var(--ink-soft)" }}>
                     {activePhotoIndex + 1} of {items.length}
                   </span>

@@ -10,15 +10,15 @@ export default function WhereWeWork() {
         title="Where We Work"
         copy="The Ekuri Clan forest communities of Akamkpa Local Government Area, Cross River State."
         crumb="Where We Work"
-        bgImage="/assets/img/ekuri-forest-work.jpg"
+        bgImage="/assets/img/archive/obudu-1999-field-visit-ekuri.jpg"
       />
 
       <section className="container" style={{ padding: "48px 24px 0" }}>
         <Reveal>
           <div style={{ borderRadius: 20, overflow: "hidden", border: "1px solid var(--paper-dim)", boxShadow: "0 12px 32px -8px rgba(11,50,11,0.12)" }}>
             <img
-              src="/assets/img/ekuri-forest-work.jpg"
-              alt="Ekuri community members actively stewarding and working in the community rainforest"
+              src="/assets/img/archive/obudu-1999-field-visit-ekuri.jpg"
+              alt="Community members and participants on field study in the Ekuri rainforest"
               style={{ width: "100%", maxHeight: 560, objectFit: "cover", display: "block" }}
             />
           </div>

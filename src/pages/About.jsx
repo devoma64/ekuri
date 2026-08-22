@@ -1,8 +1,8 @@
 import PageHeader from "../components/PageHeader";
-import Reveal from "../components/Reveal";
+import Reveal, { StaggerGroup, StaggerItem } from "../components/Reveal";
 import Timeline from "../components/Timeline";
-import { Quote } from "lucide-react";
-import { HISTORY, VISION, MISSION, APPROACH, ORG, TIMELINE, FOUNDER_QUOTE } from "../data/content";
+import { Quote, Award, Users } from "lucide-react";
+import { HISTORY, VISION, MISSION, APPROACH, ORG, TIMELINE, FOUNDER_QUOTE, HISTORICAL_LEADERS } from "../data/content";
 
 export default function About() {
   return (
@@ -22,9 +22,9 @@ export default function About() {
           <Reveal delay={100}>
             <div style={{ borderRadius: 20, overflow: "hidden", boxShadow: "0 12px 32px -8px rgba(11,50,11,0.15)", border: "1px solid var(--paper-dim)" }}>
               <img
-                src="/assets/img/wild-life.jpeg"
-                alt="Wildlife in the Ekuri Community pristine rainforest"
-                style={{ width: "100%", height: "100%", objectFit: "cover", display: "block", aspectRatio: "4/5" }}
+                src="/assets/img/archive/obudu-1999-opening-lodge.jpg"
+                alt="Ekuri community and Pan-African delegates gathered at Obudu"
+                style={{ width: "100%", height: "100%", objectFit: "cover", display: "block", aspectRatio: "4/3" }}
               />
             </div>
           </Reveal>
@@ -35,7 +35,6 @@ export default function About() {
           }
         `}</style>
       </section>
-
 
       {/* VISION / MISSION (BOTANICAL LIGHT GREEN THEME) */}
       <section
@@ -133,6 +132,7 @@ export default function About() {
         `}</style>
       </section>
 
+      {/* APPROACH */}
       <section className="section container" style={{ maxWidth: 820 }}>
         <Reveal>
           <p className="eyebrow">Our approach</p>
@@ -145,17 +145,96 @@ export default function About() {
         </Reveal>
       </section>
 
-      <section style={{ background: "var(--paper-dim)", padding: "80px 24px" }}>
-        <div className="container" style={{ maxWidth: 780 }}>
+      {/* HISTORICAL LEADERSHIP SPOTLIGHT */}
+      <section style={{ background: "linear-gradient(180deg, var(--paper-dim) 0%, #ffffff 100%)", padding: "80px 24px" }}>
+        <div className="container" style={{ maxWidth: 1020 }}>
+          <Reveal>
+            <div style={{ textAlign: "center", marginBottom: 44 }}>
+              <p className="eyebrow" style={{ color: "var(--marigold-deep)" }}>
+                Ancestral Custodians
+              </p>
+              <h2 style={{ fontSize: "clamp(24px, 3.4vw, 34px)", fontWeight: 700, fontFamily: "var(--font-serif)", color: "var(--canopy-deep)", marginTop: 8, marginBottom: 12 }}>
+                Pioneering Traditional Leaders
+              </h2>
+              <p style={{ maxWidth: 660, margin: "0 auto", fontSize: 15, color: "var(--ink-soft)", lineHeight: 1.65 }}>
+                The traditional rulers whose unyielding refusal to surrender ancestral forests laid the groundwork for Nigeria's largest community-managed rainforest.
+              </p>
+            </div>
+          </Reveal>
+
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+              gap: 28,
+            }}
+          >
+            {HISTORICAL_LEADERS.map((leader, idx) => (
+              <Reveal key={leader.name} delay={idx * 100}>
+                <div
+                  style={{
+                    background: "#ffffff",
+                    border: "1px solid rgba(17, 36, 17, 0.12)",
+                    borderRadius: 18,
+                    overflow: "hidden",
+                    height: "100%",
+                    display: "flex",
+                    flexDirection: "column",
+                    boxShadow: "0 8px 24px -6px rgba(11,50,11,0.08)",
+                  }}
+                >
+                  <div style={{ position: "relative", height: 240, overflow: "hidden", background: "#0c1e0e" }}>
+                    <img
+                      src={leader.image}
+                      alt={leader.name}
+                      style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+                    />
+                    <div
+                      style={{
+                        position: "absolute",
+                        top: 12,
+                        left: 12,
+                        padding: "3px 10px",
+                        borderRadius: 999,
+                        background: "rgba(3,14,5,0.8)",
+                        color: "var(--marigold)",
+                        fontSize: 11,
+                        fontWeight: 700,
+                        letterSpacing: "0.05em",
+                      }}
+                    >
+                      {leader.era}
+                    </div>
+                  </div>
+                  <div style={{ padding: "24px 26px", display: "flex", flexDirection: "column", flexGrow: 1 }}>
+                    <h3 style={{ fontFamily: "var(--font-serif)", fontSize: 20, fontWeight: 700, color: "var(--canopy-deep)", margin: "0 0 4px" }}>
+                      {leader.name}
+                    </h3>
+                    <p style={{ fontSize: 13, fontWeight: 700, color: "var(--marigold-deep)", textTransform: "uppercase", letterSpacing: "0.04em", margin: "0 0 12px" }}>
+                      {leader.village}
+                    </p>
+                    <p style={{ fontSize: 14, color: "var(--ink)", lineHeight: 1.65, margin: 0 }}>
+                      {leader.copy}
+                    </p>
+                  </div>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* TIMELINE OF FOREST DEFENSE */}
+      <section style={{ background: "var(--paper-dim)", padding: "88px 24px" }}>
+        <div className="container" style={{ maxWidth: 820 }}>
           <Reveal>
             <p className="eyebrow">The forest didn't protect itself</p>
-            <h2 style={{ fontSize: "clamp(24px, 3.2vw, 34px)", fontWeight: 600, marginTop: 12, marginBottom: 12 }}>
+            <h2 style={{ fontSize: "clamp(24px, 3.2vw, 34px)", fontWeight: 700, fontFamily: "var(--font-serif)", color: "var(--canopy-deep)", marginTop: 12, marginBottom: 12 }}>
               A history of defending this forest
             </h2>
-            <p style={{ marginBottom: 44 }}>
+            <p style={{ marginBottom: 44, fontSize: 15.5, color: "var(--ink-soft)", lineHeight: 1.65 }}>
               This forest has been threatened more than once, and each time the Ekuri
-              Community chose to defend it — sometimes at real personal cost. This is
-              that record, sourced directly from the documentation of those events.
+              Community chose to defend it — sometimes at real personal cost. Sourced directly from verified archival records, court cases, and photographic logs.
             </p>
           </Reveal>
           <Timeline items={TIMELINE} />
@@ -179,3 +258,4 @@ export default function About() {
     </>
   );
 }
+

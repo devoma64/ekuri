@@ -1,5 +1,5 @@
-import { useState, useMemo } from "react";
-import { Link } from "react-router-dom";
+import { useState, useMemo, useEffect } from "react";
+import { Link, useSearchParams } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Calendar,
@@ -28,15 +28,27 @@ import { NEWS_POSTS, NEWS_CATEGORIES } from "../data/news";
 import { PUBLICATIONS } from "../data/publications";
 
 export default function News() {
-  const [activeCategory, setActiveCategory] = useState("All");
+  const [searchParams, setSearchParams] = useSearchParams();
+  const postParam = searchParams.get("post") || searchParams.get("id");
+  const categoryParam = searchParams.get("category");
+
+  const [activeCategory, setActiveCategory] = useState(categoryParam || "All");
   const [searchQuery, setSearchQuery] = useState("");
-  const [selectedPostId, setSelectedPostId] = useState(null);
+  const [selectedPostId, setSelectedPostId] = useState(postParam || null);
   const [copied, setCopied] = useState(false);
+
+  useEffect(() => {
+    if (postParam) {
+      setSelectedPostId(postParam);
+    }
+  }, [postParam]);
 
   // Active selected post (if viewing full post)
   const currentPost = useMemo(() => {
-    return NEWS_POSTS.find((p) => p.id === selectedPostId) || null;
-  }, [selectedPostId]);
+    const target = selectedPostId || postParam;
+    if (!target) return null;
+    return NEWS_POSTS.find((p) => p.id === target || p.slug === target) || null;
+  }, [selectedPostId, postParam]);
 
   // Filtered post list for main stream
   const filteredPosts = useMemo(() => {
@@ -91,7 +103,12 @@ export default function News() {
 
   const handleSelectPost = (postId) => {
     setSelectedPostId(postId);
-    window.scrollTo({ top: 220, behavior: "smooth" });
+    if (postId) {
+      setSearchParams({ post: postId });
+    } else {
+      setSearchParams({});
+    }
+    window.scrollTo({ top: 120, behavior: "smooth" });
   };
 
   return (
@@ -130,7 +147,7 @@ export default function News() {
                   >
                     {/* Back Button */}
                     <button
-                      onClick={() => setSelectedPostId(null)}
+                      onClick={() => handleSelectPost(null)}
                       style={{
                         display: "inline-flex",
                         alignItems: "center",

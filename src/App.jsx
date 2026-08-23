@@ -16,6 +16,7 @@ import Publications from "./pages/Publications";
 import News from "./pages/News";
 import Contact from "./pages/Contact";
 import Donate from "./pages/Donate";
+import NotFound from "./pages/NotFound";
 
 export default function App() {
   const location = useLocation();
@@ -39,6 +40,7 @@ export default function App() {
           <Route path="/news" element={<PageTransition><News /></PageTransition>} />
           <Route path="/contact" element={<PageTransition><Contact /></PageTransition>} />
           <Route path="/donate" element={<PageTransition><Donate /></PageTransition>} />
+          <Route path="*" element={<PageTransition><NotFound /></PageTransition>} />
         </Routes>
       </AnimatePresence>
       <Footer />

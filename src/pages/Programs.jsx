@@ -17,7 +17,7 @@ export default function Programs() {
       <section className="section container">
         <StaggerGroup style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 24 }}>
           {PROGRAMS.map((p) => {
-            const Icon = ICONS[p.icon];
+            const Icon = ICONS[p.icon] || Leaf;
             return (
               <StaggerItem key={p.title}>
                 <div className="card-lift" style={{ background: "#fff", border: "1px solid var(--paper-dim)", borderRadius: 18, padding: 28, height: "100%" }}>

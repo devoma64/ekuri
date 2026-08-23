@@ -329,7 +329,7 @@ export default function Home() {
         <SectionTitle eyebrow="What we do" title="Programs & Activities" copy="Community-led conservation across ten interconnected areas of work." />
         <StaggerGroup style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 22 }}>
           {PROGRAMS.slice(0, 6).map((p) => {
-            const Icon = ICONS[p.icon];
+            const Icon = ICONS[p.icon] || Leaf;
             return (
               <StaggerItem key={p.title}>
                 <div className="card-lift" style={{ background: "#fff", border: "1px solid var(--paper-dim)", borderRadius: 16, padding: 26, height: "100%" }}>

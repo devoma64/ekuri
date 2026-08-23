@@ -12,7 +12,6 @@ export default function Programs() {
         title="Programs & Activities"
         copy="Ten interconnected areas of work, run by and for the communities of the Ekuri Clan."
         crumb="Programs"
-        bgImage="/assets/img/ekuri-rainforest-flora.jpg"
       />
       <section className="section container">
         <StaggerGroup style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 24 }}>

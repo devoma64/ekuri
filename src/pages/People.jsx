@@ -25,7 +25,6 @@ export default function People() {
         title="People"
         copy="The trustees and staff who steward the Ekuri Initiative's programs and governance."
         crumb="People"
-        bgImage="/assets/img/archive/us-embassy-2017-09.jpg"
       />
 
       <section className="section container">

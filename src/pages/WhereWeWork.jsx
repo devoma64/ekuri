@@ -10,7 +10,6 @@ export default function WhereWeWork() {
         title="Where We Work"
         copy="The Ekuri Clan forest communities of Akamkpa Local Government Area, Cross River State."
         crumb="Where We Work"
-        bgImage="/assets/img/archive/obudu-1999-field-visit-ekuri.jpg"
       />
 
       <section className="container" style={{ padding: "48px 24px 0" }}>

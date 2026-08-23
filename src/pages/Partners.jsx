@@ -10,7 +10,6 @@ export default function Partners() {
         title="Partners"
         copy="Organizations who have worked alongside the Ekuri Initiative to protect this forest."
         crumb="Partners"
-        bgImage="/assets/img/ekuri-agroforestry-farming.jpg"
       />
 
       {/* Logo strip — wordmark badges, not real logo files (see note below the

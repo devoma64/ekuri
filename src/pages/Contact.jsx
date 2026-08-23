@@ -75,7 +75,6 @@ export default function Contact() {
         title="Contact Us"
         copy="Questions, partnerships, press, or research inquiries we read every message."
         crumb="Contact"
-        bgImage="/assets/img/ekuri-rainforest-flora.jpg"
       />
       <section className="section container">
         <div className="contact-grid" style={{ display: "grid", gridTemplateColumns: "1fr", gap: 40 }}>

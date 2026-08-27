@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FileText, Image as ImageIcon, Eye, Download, Clock } from "lucide-react";
+import { FileText, Image as ImageIcon, Eye, Download, Clock, ExternalLink } from "lucide-react";
 import PageHeader from "../components/PageHeader";
 import PdfPreviewModal from "../components/PdfPreviewModal";
 import { StaggerGroup, StaggerItem } from "../components/Reveal";
@@ -50,6 +50,18 @@ export default function Publications() {
                   {pub.type === "unavailable" ? (
                     <div style={{ justifySelf: "start", display: "flex", alignItems: "center", gap: 8, fontSize: 12.5, color: "var(--ink-soft)", background: "var(--paper-dim)", padding: "9px 16px", borderRadius: 999, whiteSpace: "nowrap" }}>
                       <Clock size={14} /> Available on request
+                    </div>
+                  ) : pub.type === "external" || pub.link ? (
+                    <div style={{ justifySelf: "start", display: "flex", gap: 10 }}>
+                      <a
+                        href={pub.link}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="btn-lift"
+                        style={{ display: "inline-flex", alignItems: "center", gap: 7, padding: "10px 18px", background: "var(--canopy)", color: "#fff", borderRadius: 999, fontSize: 13, fontWeight: 600, textDecoration: "none", whiteSpace: "nowrap" }}
+                      >
+                        <ExternalLink size={15} /> Read Online
+                      </a>
                     </div>
                   ) : (
                     <div style={{ justifySelf: "start", display: "flex", gap: 10 }}>

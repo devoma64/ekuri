@@ -85,8 +85,18 @@ export default function Contact() {
                   <MapPin size={18} color="var(--canopy)" />
                 </div>
                 <div>
-                  <h3 style={{ fontSize: 14.5, fontWeight: 600 }}>Location</h3>
-                  <p style={{ margin: "3px 0 0", fontSize: 13.5 }}>{CONTACT.location}</p>
+                  <h3 style={{ fontSize: 14.5, fontWeight: 600 }}>Field Address</h3>
+                  <p style={{ margin: "3px 0 0", fontSize: 13.5 }}>{CONTACT.field}</p>
+                </div>
+              </div>
+
+              <div style={{ display: "flex", gap: 14, alignItems: "flex-start" }}>
+                <div style={{ width: 42, height: 42, borderRadius: 10, background: "var(--paper-dim)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                  <MapPin size={18} color="var(--canopy)" />
+                </div>
+                <div>
+                  <h3 style={{ fontSize: 14.5, fontWeight: 600 }}>Calabar Contact</h3>
+                  <p style={{ margin: "3px 0 0", fontSize: 13.5 }}>{CONTACT.calabar}</p>
                 </div>
               </div>
               <a href={`mailto:${ORG.email}`} style={{ display: "flex", gap: 14, alignItems: "flex-start", textDecoration: "none", color: "inherit" }}>

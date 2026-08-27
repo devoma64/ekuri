@@ -96,4 +96,21 @@ export const PUBLICATIONS = [
     file: "/assets/docs/WWF-Letter-to-President-Buhari-2015.pdf",
     copy: "WWF-UK's formal position letter to President Muhammadu Buhari requesting the Superhighway route be redrawn away from Cross River National Park and the Ekuri community forests.",
   },
+  {
+    title: "Robert M. Dunn, Chief Colin M. Dixon, and the Ekuri Community Forest Conservation Project",
+    citation: "Cross River State Forestry Project (British ODA Assisted) & Ekuri Community Chieftaincy Records (1991–1996).",
+    source: "British ODA Assisted Forestry Project, British High Commission & Eagle Cement Ltd",
+    year: 1994,
+    type: "unavailable",
+    copy: "Historical record of Robert McNaughton Dunn ('Obuol-nga-Offa' / Chief of Progress in Ekuri land), who conducted the first Stock Survey Inventory Plot at Ekuri, introduced sustainable extraction principles (Annual Allowable Cut), facilitated British High Commission grants, and deployed VSO volunteer Kirsty A. Thornber (1994–1996). Also chronicles the industrial contributions of Chief Colin Marcel Dixon (Eagle Cement) and Mr. Wolfgang Hininghofen (Crush Rock Industries) in donating trailer loads of cement and aggregates for Ekuri bridges and culverts.",
+  },
+  {
+    title: "Forests to the Highest Bidder in Nigeria: How REDD Proves Unable to Stop Deforestation",
+    citation: "Morakinyo, Tunde. (2016). Forests to the Highest Bidder in Nigeria: How REDD Proves Unable to Stop Deforestation. World Rainforest Movement (WRM) Bulletin 222, March 2016.",
+    source: "World Rainforest Movement (WRM) Bulletin 222",
+    year: 2016,
+    type: "external",
+    link: "https://www.wrm.org.uy/bulletin-articles/forests-to-the-highest-bidder-in-nigeria-how-redd-proves-unable-to-stop-deforestation",
+    copy: "Examines Dr. Tunde Morakinyo's critical contributions — from 1992 when he uncovered the secret 1983 Sibawood Logging Agreement that led to the formal establishment of The Ekuri Initiative, to facilitating IUCN and Forest Management Foundation donor support for timber transport trucks, and leading the international campaign against the 2016 Cross River Superhighway project.",
+  },
 ];

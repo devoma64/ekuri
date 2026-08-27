@@ -73,7 +73,7 @@ export default function Home() {
               textShadow: "0 2px 14px rgba(0, 0, 0, 0.45)",
             }}
           >
-            Nigeria's Largest Community Rainforest, Protected by Its People. 33,600 hectares of pristine rainforest stewarded and defended across 14 Ekuri Clan communities at the buffer zone of Cross River National Park.
+            A community-based conservation organization protecting Nigeria's largest communally owned pristine rainforest, located at the buffer zone of Cross River National Park.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}

@@ -3,6 +3,7 @@ export const NAV_LINKS = [
   { label: "About", to: "/about" },
   { label: "Programs", to: "/programs" },
   { label: "Where We Work", to: "/where-we-work" },
+  { label: "People", to: "/people" },
   { label: "Gallery", to: "/gallery" },
   { label: "Partners", to: "/partners" },
   { label: "Publications", to: "/publications" },
@@ -102,7 +103,9 @@ export const PARTNERS = [
 
 export const CONTACT = {
   email: "einitiative92@gmail.com",
-  location: "Ekuri Clan, Akamkpa Local Government Area, Cross River State, Nigeria",
+  field: "Old / New Ekuri, Akamkpa Local Government Area, Cross River State, Nigeria",
+  calabar: "c/o 7 Efio Okon Street, Off Parliamentary Road, Calabar, Cross River State, Nigeria",
+  location: "Field: Old / New Ekuri, Akamkpa Local Government Area, Cross River State, Nigeria. Calabar contact: c/o 7 Efio Okon Street, Off Parliamentary Road, Calabar, Cross River State, Nigeria.",
 };
 
 export const HISTORICAL_LEADERS = [

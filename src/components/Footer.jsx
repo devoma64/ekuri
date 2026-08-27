@@ -28,7 +28,11 @@ export default function Footer() {
             <h4 style={{ fontSize: 12.5, fontWeight: 700, color: "#fff", textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: 16 }}>Contact</h4>
             <div style={{ display: "flex", flexDirection: "column", gap: 12, fontSize: 13.5 }}>
               <div style={{ display: "flex", gap: 10, alignItems: "flex-start" }}>
-                <MapPin size={15} style={{ marginTop: 2, flexShrink: 0 }} /> {CONTACT.location}
+                <MapPin size={15} style={{ marginTop: 2, flexShrink: 0 }} />
+                <div style={{ display: "flex", flexDirection: "column", gap: 6, lineHeight: 1.5 }}>
+                  <div><span style={{ color: "#fff", fontWeight: 600 }}>Field:</span> {CONTACT.field}</div>
+                  <div><span style={{ color: "#fff", fontWeight: 600 }}>Calabar:</span> {CONTACT.calabar}</div>
+                </div>
               </div>
               <a href={`mailto:${ORG.email}`} style={{ display: "flex", gap: 10, alignItems: "center", color: "inherit", textDecoration: "none" }}>
                 <Mail size={15} /> {ORG.email}

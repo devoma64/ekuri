@@ -98,7 +98,7 @@ export default function People() {
       <PageHeader
         title="Board of Trustees & Management"
         copy="The traditional custodians, trustees, and operational leadership stewarding the Ekuri Initiative's governance and field programs."
-        crumb="People"
+        crumb="Board"
       />
 
       {/* BOARD OF TRUSTEES */}

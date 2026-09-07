@@ -33,6 +33,7 @@ export default function App() {
           <Route path="/programs" element={<PageTransition><Programs /></PageTransition>} />
           <Route path="/where-we-work" element={<PageTransition><WhereWeWork /></PageTransition>} />
           <Route path="/gallery" element={<PageTransition><Gallery /></PageTransition>} />
+          <Route path="/board" element={<PageTransition><People /></PageTransition>} />
           <Route path="/people" element={<PageTransition><People /></PageTransition>} />
           <Route path="/partners" element={<PageTransition><Partners /></PageTransition>} />
           <Route path="/publications" element={<PageTransition><Publications /></PageTransition>} />

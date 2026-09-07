@@ -5,7 +5,7 @@ import { TRUSTEES, MANAGEMENT } from "../data/content";
 
 function getInitials(name) {
   return name
-    .replace(/^(Barrister|Dr\.|Chief|Madam|Mrs|Mr\.|Pastor)\s+/i, "")
+    .replace(/^(Barrister|Dr\.?|Chief|Madam|Mrs\.?|Mr\.?|Pastor)\s+/i, "")
     .split(" ")
     .map((n) => n[0])
     .filter(Boolean)
@@ -71,22 +71,24 @@ function PersonCard({ name, role }) {
         </h4>
 
         {/* Role Pill */}
-        <span
-          style={{
-            fontSize: 12,
-            color: "var(--marigold-deep)",
-            fontWeight: 600,
-            background: "var(--paper)",
-            border: "1px solid var(--paper-dim)",
-            padding: "5px 12px",
-            borderRadius: 999,
-            marginTop: "auto",
-            lineHeight: 1.4,
-            maxWidth: "100%",
-          }}
-        >
-          {role}
-        </span>
+        {role && (
+          <span
+            style={{
+              fontSize: 12,
+              color: "var(--marigold-deep)",
+              fontWeight: 600,
+              background: "var(--paper)",
+              border: "1px solid var(--paper-dim)",
+              padding: "5px 12px",
+              borderRadius: 999,
+              marginTop: "auto",
+              lineHeight: 1.4,
+              maxWidth: "100%",
+            }}
+          >
+            {role}
+          </span>
+        )}
       </div>
     </StaggerItem>
   );
@@ -98,7 +100,7 @@ export default function People() {
       <PageHeader
         title="Board of Trustees & Management"
         copy="The traditional custodians, trustees, and operational leadership stewarding the Ekuri Initiative's governance and field programs."
-        crumb="People"
+        crumb="Board"
       />
 
       {/* BOARD OF TRUSTEES */}

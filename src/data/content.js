@@ -3,7 +3,7 @@ export const NAV_LINKS = [
   { label: "About", to: "/about" },
   { label: "Programs", to: "/programs" },
   { label: "Where We Work", to: "/where-we-work" },
-  { label: "People", to: "/people" },
+  { label: "Board", to: "/board" },
   { label: "Gallery", to: "/gallery" },
   { label: "Partners", to: "/partners" },
   { label: "Publications", to: "/publications" },
@@ -58,14 +58,17 @@ export const TRUSTEES = [
   { name: "Madam Lawrencia Akparawu", role: "Trustee" },
   { name: "Mrs Theresa Oyi Mbeh", role: "Trustee" },
   { name: "Mr. Francis A. Mbeh", role: "Trustee" },
+  { name: "Margaret E. Okon", role: "Trustee" },
+  { name: "Caroline Okory", role: "Trustee" },
 ];
 
 export const MANAGEMENT = [
   { name: "Dr. Oliver Okey Oji", role: "Programme Coordinator" },
   { name: "Pastor Louis Agbor", role: "Head, Conservation Education, Advocacy and Inter-Communal Matters" },
   { name: "Moses Otio", role: "Head, Biodiversity and Community Forestry Activities" },
-  { name: "Mr. Joseph Oyamo", role: "Field Supervisor, Sustainable Rural Livelihoods" },
-  { name: "Mr. Christopher Egot", role: "Head of Forest Protection" },
+  { name: "Victoria Stephen Oji", role: "Accountant" },
+  { name: "Nelly Enuoh", role: "IT/Admin Officer" },
+  { name: "Augusta Leo Akamo", role: "Gender/Livelihood Officer" },
 ];
 
 export const PARTNERS = [
